@@ -1199,6 +1199,15 @@ select.form-control option {
     font-weight: 700;
 }
 
+/* Trek Route Map Image */
+.route-map-img {
+    width: 100%;
+    display: block;
+    border-radius: var(--border-radius-md);
+    border: 1px solid var(--border-color);
+    box-shadow: var(--shadow-sm);
+}
+
 /* Photo Gallery Grid */
 .gallery-grid {
     display: grid;
@@ -1207,6 +1216,7 @@ select.form-control option {
 }
 
 .gallery-item {
+    position: relative;
     border-radius: var(--border-radius-sm);
     overflow: hidden;
     height: 160px;
@@ -1222,6 +1232,19 @@ select.form-control option {
 
 .gallery-item:hover img {
     transform: scale(1.08);
+}
+
+.gallery-item-caption {
+    position: absolute;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    padding: 1.4rem 0.7rem 0.5rem;
+    background: linear-gradient(to top, rgba(0,0,0,0.75), transparent);
+    color: #fff;
+    font-size: 0.78rem;
+    font-weight: 600;
+    pointer-events: none;
 }
 
 /* Trek Sidebar */
