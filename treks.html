@@ -1,0 +1,408 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Our Treks | TerraBlaze Adventures</title>
+    <meta name="description" content="Find the best trekking packages in Nepal. Filter treks in Annapurna, Everest, Manaslu, and Langtang by duration, difficulty, and region.">
+    <link rel="stylesheet" href="./css/styles.css">
+</head>
+<body>
+
+    <!-- Header Navigation -->
+    <header id="site-header" class="scrolled">
+        <div class="container nav-container">
+            <a href="index.html" class="logo" aria-label="TerraBlaze Adventures Home">
+                <img src="images/logo.png" alt="TerraBlaze Adventures" class="logo-img">
+            </a>
+            
+            <nav>
+                <ul class="nav-links" id="nav-menu">
+                    <li><a href="index.html" class="nav-link">Home</a></li>
+                    <li><a href="treks.html" class="nav-link active">Treks</a></li>
+                    <li><a href="about.html" class="nav-link">About Us</a></li>
+                    <li><a href="blog.html" class="nav-link">Blog</a></li>
+                    <li><a href="faq.html" class="nav-link">FAQs</a></li>
+                    <li><a href="contact.html" class="nav-btn">Enquire Now</a></li>
+                </ul>
+            </nav>
+
+            <button class="mobile-nav-toggle" aria-label="Open or close menu" aria-controls="nav-menu" aria-expanded="false">
+                <span class="hamburger-line"></span>
+                <span class="hamburger-line"></span>
+                <span class="hamburger-line"></span>
+            </button>
+        </div>
+    </header>
+
+    <!-- Inner Page Hero -->
+    <section class="page-hero" aria-label="Page Banner">
+        <div class="page-hero-overlay"></div>
+        <img class="page-hero-bg" src="./images/hero-fallback.jpg" alt="Nepal Himalayas">
+        <div class="page-hero-content">
+            <h1 class="page-hero-title">Our Trekking Packages</h1>
+            <p class="page-hero-desc">Choose your destination for an adventure in the Himalayas based on your interests and suitability.</p>
+        </div>
+    </section>
+
+    <!-- Filter & Trek Grid Section -->
+    <section class="section">
+        <div class="container">
+            
+            <!-- Filter Form -->
+            <div class="filter-section" aria-label="Trek Filter">
+                <div class="filter-grid">
+                    
+                    <div class="form-group">
+                        <label for="filter-region" class="form-label" style="color: var(--text-dark)">Region</label>
+                        <select id="filter-region" class="form-control" style="background-color: var(--bg-light); border-color: var(--border-color); color: var(--text-dark)">
+                            <option value="all">All Regions</option>
+                            <option value="annapurna">Annapurna</option>
+                            <option value="everest">Everest</option>
+                            <option value="manaslu">Manaslu</option>
+                            <option value="langtang">Langtang</option>
+                        </select>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="filter-difficulty" class="form-label" style="color: var(--text-dark)">Difficulty</label>
+                        <select id="filter-difficulty" class="form-control" style="background-color: var(--bg-light); border-color: var(--border-color); color: var(--text-dark)">
+                            <option value="all">All Difficulties</option>
+                            <option value="easy-moderate">Easy - Moderate</option>
+                            <option value="moderate">Moderate</option>
+                            <option value="hard">Hard</option>
+                        </select>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="filter-duration" class="form-label" style="color: var(--text-dark)">Duration</label>
+                        <select id="filter-duration" class="form-control" style="background-color: var(--bg-light); border-color: var(--border-color); color: var(--text-dark)">
+                            <option value="all">All Durations</option>
+                            <option value="11">11 Days</option>
+                            <option value="14">14 Days</option>
+                        </select>
+                    </div>
+
+                    <div class="form-group">
+                        <button id="reset-filters" class="form-submit-btn" style="margin-bottom: 4px;">Reset Filters</button>
+                    </div>
+
+                </div>
+            </div>
+
+            <!-- Treks Catalog Grid -->
+            <div class="treks-grid" id="catalog-grid">
+                
+                <!-- Trek 1: Annapurna Base Camp -->
+                <article class="trek-card" data-region="annapurna" data-difficulty="moderate" data-duration="11">
+                    <div class="trek-card-media">
+                        <span class="trek-card-badge">Popular</span>
+                        <img class="trek-card-img" src="./images/abc-thumb.jpg" alt="Annapurna Base Camp" loading="lazy">
+                        <video class="trek-card-video" src="./videotrek.mp4" muted loop playsinline preload="none"></video>
+                    </div>
+                    <div class="trek-card-content">
+                        <div class="trek-card-meta">
+                            <span class="trek-card-meta-item">
+                                <svg class="trek-card-meta-icon" viewBox="0 0 24 24"><path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm0 18c-4.41 0-8-3.59-8-8s3.59-8 8-8 8 3.59 8 8-3.59 8-8 8zm.5-13H11v6l5.25 3.15.75-1.23-4.5-2.67z"/></svg>
+                                <span class="number">11 Days</span>
+                            </span>
+                            <span class="trek-card-meta-item">
+                                <svg class="trek-card-meta-icon" viewBox="0 0 24 24"><path d="M12 2L2 22h20L12 2zm0 3.99L19.53 19H4.47L12 5.99zM13 16h-2v2h2v-2zm0-6h-2v4h2v-4z"/></svg>
+                                <span>Moderate</span>
+                            </span>
+                        </div>
+                        <h3 class="trek-card-title">Annapurna Base Camp Adventure</h3>
+                        <p class="trek-card-desc">A scenic journey to ABC (4,130m) through Machapuchare Base Camp, the traditional Gurung village of Ghandruk, and natural hot springs at Jhinu Danda.</p>
+                        <div class="trek-card-footer">
+                            <a href="trek-abc.html" class="trek-card-btn-link">
+                                View Details
+                                <svg viewBox="0 0 24 24"><path d="M8.59 16.59L13.17 12 8.59 7.41 10 6l6 6-6 6-1.41-1.41z"/></svg>
+                            </a>
+                            <a href="contact.html?trek=abc" class="trek-card-btn-action">Enquire Now</a>
+                        </div>
+                    </div>
+                    <a href="./trekplan/ABC%20Terrablaze%20(1)_page-0001.pdf" download="Annapurna-Base-Camp-Trek-Plan.pdf" class="trek-card-download">
+                        <svg viewBox="0 0 24 24"><path d="M19 9h-4V3H9v6H5l7 7 7-7zM5 18v2h14v-2H5z"/></svg>
+                        Download Trek Plan (PDF)
+                    </a>
+                </article>
+
+                <!-- Trek 2: Annapurna Circuit -->
+                <article class="trek-card" data-region="annapurna" data-difficulty="hard" data-duration="14">
+                    <div class="trek-card-media">
+                        <img class="trek-card-img" src="./images/circuit-thumb.jpg" alt="Thorong La Pass and Tilicho Lake" loading="lazy">
+                        <video class="trek-card-video" src="./videotrek.mp4" muted loop playsinline preload="none"></video>
+                    </div>
+                    <div class="trek-card-content">
+                        <div class="trek-card-meta">
+                            <span class="trek-card-meta-item">
+                                <svg class="trek-card-meta-icon" viewBox="0 0 24 24"><path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm0 18c-4.41 0-8-3.59-8-8s3.59-8 8-8 8 3.59 8 8-3.59 8-8 8zm.5-13H11v6l5.25 3.15.75-1.23-4.5-2.67z"/></svg>
+                                <span class="number">14 Days</span>
+                            </span>
+                            <span class="trek-card-meta-item">
+                                <svg class="trek-card-meta-icon" viewBox="0 0 24 24"><path d="M12 2L2 22h20L12 2zm0 3.99L19.53 19H4.47L12 5.99zM13 16h-2v2h2v-2zm0-6h-2v4h2v-4z"/></svg>
+                                <span>Hard</span>
+                            </span>
+                        </div>
+                        <h3 class="trek-card-title">Annapurna Circuit Explorer</h3>
+                        <p class="trek-card-desc">A classic loop crossing the world-famous Thorong La Pass (5,416m), pristine blue Tilicho Lake, and the sacred temple of Muktinath.</p>
+                        <div class="trek-card-footer">
+                            <a href="trek-annapurna-circuit.html" class="trek-card-btn-link">
+                                View Details
+                                <svg viewBox="0 0 24 24"><path d="M8.59 16.59L13.17 12 8.59 7.41 10 6l6 6-6 6-1.41-1.41z"/></svg>
+                            </a>
+                            <a href="contact.html?trek=circuit" class="trek-card-btn-action">Enquire Now</a>
+                        </div>
+                    </div>
+                    <a href="./trekplan/Terrablaze%20thorongla%20(1).pdf" download="Annapurna-Circuit-Trek-Plan.pdf" class="trek-card-download">
+                        <svg viewBox="0 0 24 24"><path d="M19 9h-4V3H9v6H5l7 7 7-7zM5 18v2h14v-2H5z"/></svg>
+                        Download Trek Plan (PDF)
+                    </a>
+                </article>
+
+                <!-- Trek 3: Manaslu Circuit -->
+                <article class="trek-card" data-region="manaslu" data-difficulty="hard" data-duration="14">
+                    <div class="trek-card-media">
+                        <img class="trek-card-img" src="./images/manaslu-thumb.jpg" alt="Manaslu Circuit" loading="lazy">
+                        <video class="trek-card-video" src="./videotrek.mp4" muted loop playsinline preload="none"></video>
+                    </div>
+                    <div class="trek-card-content">
+                        <div class="trek-card-meta">
+                            <span class="trek-card-meta-item">
+                                <svg class="trek-card-meta-icon" viewBox="0 0 24 24"><path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm0 18c-4.41 0-8-3.59-8-8s3.59-8 8-8 8 3.59 8 8-3.59 8-8 8zm.5-13H11v6l5.25 3.15.75-1.23-4.5-2.67z"/></svg>
+                                <span class="number">14 Days</span>
+                            </span>
+                            <span class="trek-card-meta-item">
+                                <svg class="trek-card-meta-icon" viewBox="0 0 24 24"><path d="M12 2L2 22h20L12 2zm0 3.99L19.53 19H4.47L12 5.99zM13 16h-2v2h2v-2zm0-6h-2v4h2v-4z"/></svg>
+                                <span>Hard</span>
+                            </span>
+                        </div>
+                        <h3 class="trek-card-title">Ultimate Manaslu Circuit</h3>
+                        <p class="trek-card-desc">An off-the-beaten-path trek crossing Larkya La Pass (5,165m), exploring restricted Tibetan-influenced culture and unique mountain biodiversity.</p>
+                        <div class="trek-card-footer">
+                            <a href="trek-manaslu.html" class="trek-card-btn-link">
+                                View Details
+                                <svg viewBox="0 0 24 24"><path d="M8.59 16.59L13.17 12 8.59 7.41 10 6l6 6-6 6-1.41-1.41z"/></svg>
+                            </a>
+                            <a href="contact.html?trek=manaslu" class="trek-card-btn-action">Enquire Now</a>
+                        </div>
+                    </div>
+                    <a href="./trekplan/manaslu%20Terrablaze.pdf" download="Manaslu-Circuit-Trek-Plan.pdf" class="trek-card-download">
+                        <svg viewBox="0 0 24 24"><path d="M19 9h-4V3H9v6H5l7 7 7-7zM5 18v2h14v-2H5z"/></svg>
+                        Download Trek Plan (PDF)
+                    </a>
+                </article>
+
+                <!-- Trek 4: Langtang Valley -->
+                <article class="trek-card" data-region="langtang" data-difficulty="easy-moderate" data-duration="11">
+                    <div class="trek-card-media">
+                        <img class="trek-card-img" src="./images/langtang-thumb.jpg" alt="Langtang Valley" loading="lazy">
+                        <video class="trek-card-video" src="./videotrek.mp4" muted loop playsinline preload="none"></video>
+                    </div>
+                    <div class="trek-card-content">
+                        <div class="trek-card-meta">
+                            <span class="trek-card-meta-item">
+                                <svg class="trek-card-meta-icon" viewBox="0 0 24 24"><path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm0 18c-4.41 0-8-3.59-8-8s3.59-8 8-8 8 3.59 8 8-3.59 8-8 8zm.5-13H11v6l5.25 3.15.75-1.23-4.5-2.67z"/></svg>
+                                <span class="number">11 Days</span>
+                            </span>
+                            <span class="trek-card-meta-item">
+                                <svg class="trek-card-meta-icon" viewBox="0 0 24 24"><path d="M12 2L2 22h20L12 2zm0 3.99L19.53 19H4.47L12 5.99zM13 16h-2v2h2v-2zm0-6h-2v4h2v-4z"/></svg>
+                                <span>Easy-Moderate</span>
+                            </span>
+                        </div>
+                        <h3 class="trek-card-title">Langtang Valley Escape</h3>
+                        <p class="trek-card-desc">A trek to Kyanjin Gompa, climbing Tserko Ri peak (4,984m), and visiting a yak cheese factory. The closest Himalayan adventure from Kathmandu.</p>
+                        <div class="trek-card-footer">
+                            <a href="trek-langtang.html" class="trek-card-btn-link">
+                                View Details
+                                <svg viewBox="0 0 24 24"><path d="M8.59 16.59L13.17 12 8.59 7.41 10 6l6 6-6 6-1.41-1.41z"/></svg>
+                            </a>
+                            <a href="contact.html?trek=langtang" class="trek-card-btn-action">Enquire Now</a>
+                        </div>
+                    </div>
+                    <a href="./trekplan/Terra%20-%20langtang%20.pdf" download="Langtang-Valley-Trek-Plan.pdf" class="trek-card-download">
+                        <svg viewBox="0 0 24 24"><path d="M19 9h-4V3H9v6H5l7 7 7-7zM5 18v2h14v-2H5z"/></svg>
+                        Download Trek Plan (PDF)
+                    </a>
+                </article>
+
+                <!-- Trek 5: Everest Base Camp -->
+                <article class="trek-card" data-region="everest" data-difficulty="hard" data-duration="14">
+                    <div class="trek-card-media">
+                        <span class="trek-card-badge">Special</span>
+                        <img class="trek-card-img" src="./images/ebc-thumb.jpg" alt="Everest Base Camp" loading="lazy">
+                        <video class="trek-card-video" src="./videotrek.mp4" muted loop playsinline preload="none"></video>
+                    </div>
+                    <div class="trek-card-content">
+                        <div class="trek-card-meta">
+                            <span class="trek-card-meta-item">
+                                <svg class="trek-card-meta-icon" viewBox="0 0 24 24"><path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm0 18c-4.41 0-8-3.59-8-8s3.59-8 8-8 8 3.59 8 8-3.59 8-8 8zm.5-13H11v6l5.25 3.15.75-1.23-4.5-2.67z"/></svg>
+                                <span class="number">14 Days</span>
+                            </span>
+                            <span class="trek-card-meta-item">
+                                <svg class="trek-card-meta-icon" viewBox="0 0 24 24"><path d="M12 2L2 22h20L12 2zm0 3.99L19.53 19H4.47L12 5.99zM13 16h-2v2h2v-2zm0-6h-2v4h2v-4z"/></svg>
+                                <span>Hard</span>
+                            </span>
+                        </div>
+                        <h3 class="trek-card-title">Everest Base Camp Trek</h3>
+                        <p class="trek-card-desc">Reach Everest Base Camp (5,364m) and enjoy 360-degree views of Mt. Everest from Kala Patthar (5,550m). Explore the famous Sherpa hub of Namche Bazaar.</p>
+                        <div class="trek-card-footer">
+                            <a href="trek-ebc.html" class="trek-card-btn-link">
+                                View Details
+                                <svg viewBox="0 0 24 24"><path d="M8.59 16.59L13.17 12 8.59 7.41 10 6l6 6-6 6-1.41-1.41z"/></svg>
+                            </a>
+                            <a href="contact.html?trek=ebc" class="trek-card-btn-action">Enquire Now</a>
+                        </div>
+                    </div>
+                    <a href="./trekplan/EBC%20Terrablaze.pdf" download="Everest-Base-Camp-Trek-Plan.pdf" class="trek-card-download">
+                        <svg viewBox="0 0 24 24"><path d="M19 9h-4V3H9v6H5l7 7 7-7zM5 18v2h14v-2H5z"/></svg>
+                        Download Trek Plan (PDF)
+                    </a>
+                </article>
+
+            </div>
+
+            <!-- No results message -->
+            <div id="no-results" style="display: none; text-align: center; padding: 3rem; color: var(--text-muted); font-size: 1.2rem;">
+                Sorry, no treks matched your search criteria. Please try resetting or changing the filters.
+            </div>
+
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        <div class="container footer-grid">
+            <div class="footer-about">
+                <div class="logo footer-logo">
+                    <img src="images/logo.png" alt="TerraBlaze Adventures" class="logo-img">
+                </div>
+                <p>TerraBlaze Adventures is a fully licensed trekking and mountaineering agency based in Nepal. Your safety is our highest priority.</p>
+                <div class="footer-socials">
+                    <a href="https://facebook.com" class="footer-social-link" aria-label="Facebook">
+                        <svg viewBox="0 0 24 24"><path d="M9 8H7v3h2v9h3v-9h3.625L15 8h-3V6.368c0-.853.174-1.303 1.258-1.303H15V2h-2.763C9.697 2 9 3.011 9 4.966V8z"/></svg>
+                    </a>
+                    <a href="https://instagram.com" class="footer-social-link" aria-label="Instagram">
+                        <svg viewBox="0 0 24 24"><path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zM12 0C8.741 0 8.333.014 7.053.072 2.695.272.273 2.69.073 7.051C.014 8.333 0 8.741 0 12c0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98 1.281.058 1.689.072 4.948.072 3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98C15.668.014 15.259 0 12 0zm0 5.838a6.162 6.162 0 100 12.324 6.162 6.162 0 000-12.324zM12 16a4 4 0 110-8 4 4 0 010 8zm6.406-11.845a1.44 1.44 0 100 2.881 1.44 1.44 0 000-2.881z"/></svg>
+                    </a>
+                </div>
+            </div>
+
+            <div class="footer-links">
+                <h4 class="footer-title">Quick Links</h4>
+                <ul>
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="treks.html">All Treks</a></li>
+                    <li><a href="about.html">About Us</a></li>
+                    <li><a href="blog.html">Blog & Articles</a></li>
+                    <li><a href="faq.html">FAQs</a></li>
+                </ul>
+            </div>
+
+            <div class="footer-links">
+                <h4 class="footer-title">Legal Policies</h4>
+                <ul>
+                    <li><a href="legal.html#privacy">Privacy Policy</a></li>
+                    <li><a href="legal.html#terms">Terms & Conditions</a></li>
+                    <li><a href="legal.html#booking">Booking Policy</a></li>
+                    <li><a href="legal.html#cancellation">Cancellation Policy</a></li>
+                </ul>
+            </div>
+
+            <div class="footer-newsletter">
+                <h4 class="footer-title">Newsletter & Offers</h4>
+                <p>Subscribe to our newsletter to receive updates on new trek packages, tips, and exclusive offers.</p>
+                <form action="#" class="newsletter-form">
+                    <input type="email" name="email" class="newsletter-input" placeholder="Your email address" required aria-label="Email for Newsletter">
+                    <button type="submit" class="newsletter-btn">Subscribe</button>
+                </form>
+            </div>
+        </div>
+        <div class="container footer-bottom">
+            <p>&copy; 2026 TerraBlaze Adventures. All rights reserved. Regd No: 125496/078/Bagmati.</p>
+            <p>Kathmandu, Nepal | Tel: +977 01-4XXXXXX</p>
+        </div>
+    </footer>
+
+    <!-- Floating WhatsApp Button -->
+    <div class="floating-widgets">
+        <a href="https://wa.me/9779816261447" class="whatsapp-float" target="_blank" rel="noopener noreferrer" aria-label="Chat via WhatsApp">
+            <svg viewBox="0 0 24 24"><path d="M.057 24l1.687-6.163c-1.041-1.804-1.588-3.849-1.587-5.946C.06 5.348 5.397.01 12.008.01c3.202.001 6.212 1.246 8.477 3.513 2.262 2.268 3.507 5.28 3.505 8.484-.004 6.657-5.34 11.997-11.953 11.997-2.005-.001-3.973-.504-5.714-1.466L0 24zm6.59-4.846c1.6.95 3.197 1.451 4.792 1.453 5.424 0 9.835-4.417 9.837-9.848.002-2.63-1.02-5.1-2.871-6.953C16.5 1.95 14.037.93c-5.43 0-9.843 4.417-9.845 9.849 0 1.785.49 3.5 1.42 5.05L2.01 21.73l6.058-1.59-.42-.286z"/></svg>
+        </a>
+    </div>
+
+    <!-- Scripts -->
+    <script src="./js/main.js"></script>
+    <script src="./js/video-handler.js"></script>
+    
+    <!-- Inline Filter Engine Script -->
+    <script>
+        document.addEventListener('DOMContentLoaded', () => {
+            const regionSelect = document.getElementById('filter-region');
+            const difficultySelect = document.getElementById('filter-difficulty');
+            const durationSelect = document.getElementById('filter-duration');
+            const resetButton = document.getElementById('reset-filters');
+            
+            const cards = document.querySelectorAll('.trek-card');
+            const noResults = document.getElementById('no-results');
+
+            function filterTreks() {
+                const selectedRegion = regionSelect.value;
+                const selectedDifficulty = difficultySelect.value;
+                const selectedDuration = durationSelect.value;
+                
+                let visibleCount = 0;
+
+                cards.forEach(card => {
+                    const cardRegion = card.getAttribute('data-region');
+                    const cardDifficulty = card.getAttribute('data-difficulty');
+                    const cardDuration = card.getAttribute('data-duration');
+
+                    const matchesRegion = (selectedRegion === 'all' || cardRegion === selectedRegion);
+                    const matchesDifficulty = (selectedDifficulty === 'all' || cardDifficulty === selectedDifficulty);
+                    const matchesDuration = (selectedDuration === 'all' || cardDuration === selectedDuration);
+
+                    if (matchesRegion && matchesDifficulty && matchesDuration) {
+                        card.style.display = 'flex';
+                        visibleCount++;
+                    } else {
+                        card.style.display = 'none';
+                    }
+                });
+
+                if (visibleCount === 0) {
+                    noResults.style.display = 'block';
+                } else {
+                    noResults.style.display = 'none';
+                }
+            }
+
+            // Event Listeners
+            regionSelect.addEventListener('change', filterTreks);
+            difficultySelect.addEventListener('change', filterTreks);
+            durationSelect.addEventListener('change', filterTreks);
+
+            resetButton.addEventListener('click', () => {
+                regionSelect.value = 'all';
+                difficultySelect.value = 'all';
+                durationSelect.value = 'all';
+                filterTreks();
+            });
+
+            // Initial query parsing (if url contains e.g., ?region=annapurna)
+            const urlParams = new URLSearchParams(window.location.search);
+            const regionParam = urlParams.get('region');
+            const difficultyParam = urlParams.get('difficulty');
+            const durationParam = urlParams.get('duration');
+
+            if (regionParam) regionSelect.value = regionParam;
+            if (difficultyParam) difficultySelect.value = difficultyParam;
+            if (durationParam) durationSelect.value = durationParam;
+
+            if (regionParam || difficultyParam || durationParam) {
+                filterTreks();
+            }
+        });
+    </script>
+</body>
+</html>
