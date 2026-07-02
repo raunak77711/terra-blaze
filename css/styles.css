@@ -360,38 +360,6 @@ header.scrolled .hamburger-line {
     transform: translateY(-3px);
 }
 
-/* Hero Accessibility Controls */
-.video-control-btn {
-    position: absolute;
-    bottom: 2rem;
-    right: 2rem;
-    z-index: 10;
-    background: rgba(255, 255, 255, 0.2);
-    border: 1px solid var(--glass-border);
-    backdrop-filter: blur(5px);
-    -webkit-backdrop-filter: blur(5px);
-    width: 45px;
-    height: 45px;
-    border-radius: 50%;
-    color: var(--text-light);
-    cursor: pointer;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    transition: all var(--transition-fast);
-}
-
-.video-control-btn:hover {
-    background: rgba(255, 255, 255, 0.4);
-    transform: scale(1.1);
-}
-
-.video-control-btn svg {
-    width: 18px;
-    height: 18px;
-    fill: currentColor;
-}
-
 /* Sections Global */
 .section {
     padding: 7rem 0;
@@ -776,26 +744,26 @@ header.scrolled .hamburger-line {
     opacity: 0.9;
 }
 
-.whatsapp-large-btn {
+.email-large-btn {
     display: inline-flex;
     align-items: center;
     gap: 0.8rem;
-    background-color: #25d366;
+    background-color: var(--accent);
     color: var(--text-light);
     padding: 0.9rem 1.8rem;
     border-radius: var(--border-radius-sm);
     font-weight: 700;
-    box-shadow: 0 4px 15px rgba(37, 211, 102, 0.3);
+    box-shadow: 0 4px 15px rgba(232, 130, 30, 0.3);
     transition: all var(--transition-fast);
 }
 
-.whatsapp-large-btn:hover {
-    background-color: #20ba59;
+.email-large-btn:hover {
+    background-color: #c96e15;
     transform: translateY(-3px);
-    box-shadow: 0 6px 20px rgba(37, 211, 102, 0.4);
+    box-shadow: 0 6px 20px rgba(232, 130, 30, 0.4);
 }
 
-.whatsapp-large-btn svg {
+.email-large-btn svg {
     width: 24px;
     height: 24px;
     fill: currentColor;
@@ -1454,8 +1422,8 @@ footer {
     gap: 1rem;
 }
 
-.whatsapp-float {
-    background-color: #25d366;
+.email-float {
+    background-color: var(--accent);
     color: var(--text-light);
     width: 60px;
     height: 60px;
@@ -1463,18 +1431,18 @@ footer {
     display: flex;
     align-items: center;
     justify-content: center;
-    box-shadow: 0 4px 15px rgba(37, 211, 102, 0.4);
+    box-shadow: 0 4px 15px rgba(232, 130, 30, 0.4);
     transition: all var(--transition-fast);
     animation: floatBounce 3s infinite ease-in-out;
 }
 
-.whatsapp-float:hover {
-    background-color: #20ba59;
+.email-float:hover {
+    background-color: #c96e15;
     transform: scale(1.1);
-    box-shadow: 0 6px 20px rgba(37, 211, 102, 0.5);
+    box-shadow: 0 6px 20px rgba(232, 130, 30, 0.5);
 }
 
-.whatsapp-float svg {
+.email-float svg {
     width: 32px;
     height: 32px;
     fill: currentColor;

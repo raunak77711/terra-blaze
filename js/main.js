@@ -90,7 +90,7 @@ document.addEventListener('DOMContentLoaded', () => {
             }
 
             // Successful submit mock
-            const successMessage = 'Enquiry submitted successfully!\n\nThank you for contacting TerraBlaze Adventures. We will get back to you within 24 hours via email or WhatsApp.';
+            const successMessage = 'Enquiry submitted successfully!\n\nThank you for contacting TerraBlaze Adventures. We will get back to you within 24 hours via email.';
             alert(successMessage);
             form.reset();
         });
