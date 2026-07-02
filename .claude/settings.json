@@ -13,7 +13,8 @@
       "Bash(npm init *)",
       "Bash(npm install *)",
       "Bash(cp /tmp/shot.js 'C:\\\\Users\\\\Acer\\\\AppData\\\\Local\\\\Temp\\\\claude\\\\c--Users-Acer-OneDrive-Desktop-syncshi\\\\bbd9d339-6fcd-4bf7-b426-fe1486964a45\\\\scratchpad/shot.js')",
-      "Bash(node shot.js)"
+      "Bash(node shot.js)",
+      "Bash(pkill -f \"http.server 8843\")"
     ]
   }
 }

@@ -113,11 +113,6 @@ header.scrolled .nav-link {
     color: var(--text-dark);
 }
 
-header.scrolled .logo {
-    box-shadow: 0 1px 8px rgba(14, 46, 74, 0.12);
-    border: 1px solid var(--border-color);
-}
-
 .nav-container {
     display: flex;
     justify-content: space-between;
@@ -129,11 +124,7 @@ header.scrolled .logo {
     display: inline-flex;
     align-items: center;
     gap: 0.65rem;
-    background: #ffffff;
-    border-radius: 10px;
-    padding: 8px 16px;
-    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.22);
-    transition: box-shadow var(--transition-normal), border var(--transition-normal);
+    background: transparent;
 }
 
 .logo-img {
@@ -141,6 +132,12 @@ header.scrolled .logo {
     width: auto;
     object-fit: contain;
     display: block;
+    filter: drop-shadow(0 2px 6px rgba(0, 0, 0, 0.35));
+    transition: filter var(--transition-normal);
+}
+
+header.scrolled .logo-img {
+    filter: none;
 }
 
 .logo-text-group {
@@ -154,7 +151,14 @@ header.scrolled .logo {
     font-weight: 700;
     font-size: 1.15rem;
     letter-spacing: 0.01em;
+    color: var(--text-light);
+    text-shadow: 0 1px 4px rgba(0, 0, 0, 0.35);
+    transition: color var(--transition-normal), text-shadow var(--transition-normal);
+}
+
+header.scrolled .logo-title {
     color: var(--primary);
+    text-shadow: none;
 }
 
 .logo-tagline {
