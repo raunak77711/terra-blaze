@@ -25,7 +25,7 @@ document.addEventListener('DOMContentLoaded', () => {
             } else if (!header.classList.contains('scrolled')) {
                 hamburgerLines.forEach(line => line.style.backgroundColor = '#ffffff');
             } else {
-                hamburgerLines.forEach(line => line.style.backgroundColor = '#0f3d5c');
+                hamburgerLines.forEach(line => line.style.backgroundColor = '#0e2e4a');
             }
         });
 
