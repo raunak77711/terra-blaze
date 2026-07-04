@@ -15,7 +15,10 @@
       "Bash(cp /tmp/shot.js 'C:\\\\Users\\\\Acer\\\\AppData\\\\Local\\\\Temp\\\\claude\\\\c--Users-Acer-OneDrive-Desktop-syncshi\\\\bbd9d339-6fcd-4bf7-b426-fe1486964a45\\\\scratchpad/shot.js')",
       "Bash(node shot.js)",
       "Bash(pkill -f \"http.server 8843\")",
-      "Bash(node -e ' *)"
+      "Bash(node -e ' *)",
+      "Bash(powershell -Command \"Get-ChildItem -Path 'c:\\\\Users\\\\Acer\\\\OneDrive\\\\Desktop\\\\syncshi' -File | Select-Object Name\")",
+      "Bash(node \"C:\\\\Users\\\\Acer\\\\AppData\\\\Local\\\\Temp\\\\claude\\\\c--Users-Acer-OneDrive-Desktop-syncshi\\\\6a9769d6-bcda-4090-98d9-aeef446af9aa\\\\scratchpad\\\\seo-gen.js\")",
+      "Bash(echo \"exit=$?\")"
     ]
   }
 }
