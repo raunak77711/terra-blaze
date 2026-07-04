@@ -89,7 +89,41 @@ document.addEventListener('DOMContentLoaded', () => {
                 return;
             }
 
-            // Successful submit mock
+            // Trek enquiry forms (identified by the "trek" field) open a pre-filled
+            // Gmail compose window. Other forms (e.g. the footer newsletter) keep
+            // the mock success behavior.
+            if (trekInput) {
+                const trekNames = {
+                    abc: 'Annapurna Base Camp (11 Days)',
+                    circuit: 'Annapurna Circuit (14 Days)',
+                    manaslu: 'Manaslu Circuit (14 Days)',
+                    langtang: 'Langtang Valley (11 Days)',
+                    ebc: 'Everest Base Camp (14 Days)'
+                };
+                const trekLabel = trekInput.tagName === 'SELECT'
+                    ? trekInput.options[trekInput.selectedIndex].text
+                    : (trekNames[trekInput.value] || trekInput.value);
+                const groupSizeInput = form.querySelector('[name="group-size"]');
+
+                const bodyLines = [
+                    `Name: ${nameInput.value.trim()}`,
+                    `Email: ${emailInput.value.trim()}`,
+                    `Country: ${countryInput ? countryInput.value.trim() : ''}`,
+                    `Interested Trek: ${trekLabel}`,
+                    `Number of Travelers: ${groupSizeInput ? groupSizeInput.value : ''}`,
+                    `Departure Date: ${dateInput && dateInput.value ? dateInput.value : 'Not specified'}`,
+                    `Message: ${messageInput && messageInput.value.trim() ? messageInput.value.trim() : 'None'}`
+                ];
+
+                const subject = encodeURIComponent(`New Trek Enquiry - ${trekLabel}`);
+                const body = encodeURIComponent(bodyLines.join('\n'));
+                const gmailUrl = `https://mail.google.com/mail/?view=cm&fs=1&to=info@terrablazeadventure.com&su=${subject}&body=${body}`;
+
+                window.open(gmailUrl, '_blank');
+                form.reset();
+                return;
+            }
+
             const successMessage = 'Enquiry submitted successfully!\n\nThank you for contacting TerraBlaze Adventures. We will get back to you within 24 hours via email.';
             alert(successMessage);
             form.reset();
