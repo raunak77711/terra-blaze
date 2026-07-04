@@ -18,7 +18,12 @@
       "Bash(node -e ' *)",
       "Bash(powershell -Command \"Get-ChildItem -Path 'c:\\\\Users\\\\Acer\\\\OneDrive\\\\Desktop\\\\syncshi' -File | Select-Object Name\")",
       "Bash(node \"C:\\\\Users\\\\Acer\\\\AppData\\\\Local\\\\Temp\\\\claude\\\\c--Users-Acer-OneDrive-Desktop-syncshi\\\\6a9769d6-bcda-4090-98d9-aeef446af9aa\\\\scratchpad\\\\seo-gen.js\")",
-      "Bash(echo \"exit=$?\")"
+      "Bash(echo \"exit=$?\")",
+      "Bash(curl -s -o /dev/null -w \"www: %{http_code} final=%{url_effective}\\\\n\" -L \"https://www.terrablazeadventure.com/sitemap.xml\")",
+      "Bash(curl -s -o /dev/null -w \"non-www: %{http_code} final=%{url_effective}\\\\n\" -L \"https://terrablazeadventure.com/sitemap.xml\")",
+      "Bash(curl -s -o /dev/null -w \"homepage: %{http_code} final=%{url_effective}\\\\n\" -L \"https://terrablazeadventure.com/\")",
+      "Bash(curl -s -L \"https://terrablazeadventure.com/sitemap.xml\")",
+      "Bash(curl -s -o /dev/null -w \"%{content_type}\\\\n\" -L \"https://terrablazeadventure.com/sitemap.xml\")"
     ]
   }
 }
