@@ -172,6 +172,10 @@ header.scrolled .logo-title {
 
 .footer-logo {
     display: inline-flex;
+    align-items: center;
+    background-color: rgba(255, 255, 255, 0.9);
+    padding: 0.5rem 0.9rem;
+    border-radius: 10px;
 }
 
 .footer-logo .logo-img {
@@ -180,6 +184,8 @@ header.scrolled .logo-title {
 
 .footer-logo .logo-title {
     font-size: 1.05rem;
+    color: var(--primary);
+    text-shadow: none;
 }
 
 /* Nav Links */
