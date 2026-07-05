@@ -159,4 +159,101 @@ document.addEventListener('DOMContentLoaded', () => {
             });
         });
     });
+
+    // 5. Premium Micro-Animations
+    const prefersReducedMotion = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+
+    // 5a. Reading progress bar
+    const progressBar = document.createElement('div');
+    progressBar.className = 'scroll-progress';
+    document.body.appendChild(progressBar);
+
+    let progressTicking = false;
+    const updateProgress = () => {
+        const scrollable = document.documentElement.scrollHeight - window.innerHeight;
+        progressBar.style.width = scrollable > 0 ? (window.scrollY / scrollable) * 100 + '%' : '0%';
+        progressTicking = false;
+    };
+    window.addEventListener('scroll', () => {
+        if (!progressTicking) {
+            progressTicking = true;
+            requestAnimationFrame(updateProgress);
+        }
+    }, { passive: true });
+    updateProgress();
+
+    // 5b. Scroll-reveal with per-group stagger
+    if (!prefersReducedMotion && 'IntersectionObserver' in window) {
+        const revealSelectors = [
+            '.section-header', '.trek-card', '.feature-box', '.testimonial-card',
+            '.blog-card', '.trust-item', '.inc-box', '.exc-box', '.sidebar-card',
+            '.blog-sidebar-card', '.blog-featured', '.gallery-item', '.cta-banner-text',
+            '.enquiry-form-card', '.form-light-container', '.accordion-item',
+            '.route-map-img', '.filter-section'
+        ].join(', ');
+
+        const revealEls = document.querySelectorAll(revealSelectors);
+        const staggerCount = new Map();
+
+        revealEls.forEach(el => {
+            const idx = staggerCount.get(el.parentElement) || 0;
+            staggerCount.set(el.parentElement, idx + 1);
+            el.style.setProperty('--reveal-delay', Math.min(idx * 0.08, 0.4) + 's');
+            el.classList.add('reveal-init');
+        });
+
+        const revealObserver = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    entry.target.classList.add('revealed');
+                    revealObserver.unobserve(entry.target);
+                }
+            });
+        }, { threshold: 0.12, rootMargin: '0px 0px -40px 0px' });
+
+        revealEls.forEach(el => revealObserver.observe(el));
+    }
+
+    // 5c. Count-up animation for statistics (e.g. "15+", "5000+", "100%", "5/5")
+    if (!prefersReducedMotion && 'IntersectionObserver' in window) {
+        const animateCount = (el) => {
+            const match = el.textContent.trim().match(/^(\d+(?:\.\d+)?)(.*)$/);
+            if (!match) return;
+            const target = parseFloat(match[1]);
+            const suffix = match[2];
+            const decimals = match[1].includes('.') ? match[1].split('.')[1].length : 0;
+            const duration = 1600;
+            const start = performance.now();
+
+            const step = (now) => {
+                const progress = Math.min((now - start) / duration, 1);
+                const eased = 1 - Math.pow(1 - progress, 3);
+                el.textContent = (target * eased).toFixed(decimals) + suffix;
+                if (progress < 1) requestAnimationFrame(step);
+            };
+            requestAnimationFrame(step);
+        };
+
+        const counterObserver = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    animateCount(entry.target);
+                    counterObserver.unobserve(entry.target);
+                }
+            });
+        }, { threshold: 0.5 });
+
+        document.querySelectorAll('.trust-item h3, .page-hero-stat strong')
+            .forEach(el => counterObserver.observe(el));
+    }
+
+    // 5d. Hero scroll-down indicator
+    const hero = document.querySelector('.hero');
+    if (hero && !prefersReducedMotion) {
+        const indicator = document.createElement('div');
+        indicator.className = 'hero-scroll-indicator';
+        indicator.setAttribute('aria-hidden', 'true');
+        indicator.innerHTML = '<span class="mouse"></span><span>Scroll</span>';
+        hero.appendChild(indicator);
+    }
 });

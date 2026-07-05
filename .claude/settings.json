@@ -23,7 +23,17 @@
       "Bash(curl -s -o /dev/null -w \"non-www: %{http_code} final=%{url_effective}\\\\n\" -L \"https://terrablazeadventure.com/sitemap.xml\")",
       "Bash(curl -s -o /dev/null -w \"homepage: %{http_code} final=%{url_effective}\\\\n\" -L \"https://terrablazeadventure.com/\")",
       "Bash(curl -s -L \"https://terrablazeadventure.com/sitemap.xml\")",
-      "Bash(curl -s -o /dev/null -w \"%{content_type}\\\\n\" -L \"https://terrablazeadventure.com/sitemap.xml\")"
+      "Bash(curl -s -o /dev/null -w \"%{content_type}\\\\n\" -L \"https://terrablazeadventure.com/sitemap.xml\")",
+      "Bash(node --check js/main.js)",
+      "Bash(python -m http.server 8931 --bind 127.0.0.1)",
+      "PowerShell($edge = \"C:\\\\Program Files \\(x86\\)\\\\Microsoft\\\\Edge\\\\Application\\\\msedge.exe\"; if \\(-not \\(Test-Path $edge\\)\\) { $edge = \"C:\\\\Program Files\\\\Microsoft\\\\Edge\\\\Application\\\\msedge.exe\" }; $out = \"C:\\\\Users\\\\Acer\\\\AppData\\\\Local\\\\Temp\\\\claude\\\\c--Users-Acer-OneDrive-Desktop-syncshi\\\\deb1cc9e-3d0b-4def-997a-0772d8313e99\\\\scratchpad\"; & $edge --headless --disable-gpu --window-size=1400,900 --virtual-time-budget=6000 --screenshot=\"$out\\\\home-top.png\" \"http://127.0.0.1:8931/index.html\" ; Start-Sleep -Seconds 2; Test-Path \"$out\\\\home-top.png\")",
+      "PowerShell($edge = \"C:\\\\Program Files \\(x86\\)\\\\Microsoft\\\\Edge\\\\Application\\\\msedge.exe\"; if \\(-not \\(Test-Path $edge\\)\\) { $edge = \"C:\\\\Program Files\\\\Microsoft\\\\Edge\\\\Application\\\\msedge.exe\" }; $out = \"C:\\\\Users\\\\Acer\\\\AppData\\\\Local\\\\Temp\\\\claude\\\\c--Users-Acer-OneDrive-Desktop-syncshi\\\\deb1cc9e-3d0b-4def-997a-0772d8313e99\\\\scratchpad\"; & $edge --headless --disable-gpu --window-size=1400,3400 --virtual-time-budget=10000 --screenshot=\"$out\\\\home-full.png\" \"http://127.0.0.1:8931/index.html\"; Start-Sleep -Seconds 3; Get-ChildItem $out\\\\home-full.png | Select-Object Name, Length)",
+      "PowerShell(Get-ChildItem \"c:\\\\Users\\\\Acer\\\\OneDrive\\\\Desktop\\\\syncshi\" -File | Select-Object Name, @{N='MB';E={[math]::Round\\($_.Length/1MB,2\\)}})",
+      "WebSearch",
+      "WebFetch(domain:www.pexels.com)",
+      "Bash(curl -sIL -A \"Mozilla/5.0\" \"https://www.pexels.com/download/video/30778289/\")",
+      "Bash(curl -sIL -A \"Mozilla/5.0\" \"https://www.pexels.com/download/video/4763824/\")",
+      "Bash(curl -s -A \"Mozilla/5.0\" -o \"c:/Users/Acer/OneDrive/Desktop/syncshi/hero-mountain.mp4\" \"https://videos.pexels.com/video-files/4763824/4763824-hd_1920_1080_24fps.mp4\")"
     ]
   }
 }
