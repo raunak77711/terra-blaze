@@ -33,7 +33,18 @@
       "WebFetch(domain:www.pexels.com)",
       "Bash(curl -sIL -A \"Mozilla/5.0\" \"https://www.pexels.com/download/video/30778289/\")",
       "Bash(curl -sIL -A \"Mozilla/5.0\" \"https://www.pexels.com/download/video/4763824/\")",
-      "Bash(curl -s -A \"Mozilla/5.0\" -o \"c:/Users/Acer/OneDrive/Desktop/syncshi/hero-mountain.mp4\" \"https://videos.pexels.com/video-files/4763824/4763824-hd_1920_1080_24fps.mp4\")"
+      "Bash(curl -s -A \"Mozilla/5.0\" -o \"c:/Users/Acer/OneDrive/Desktop/syncshi/hero-mountain.mp4\" \"https://videos.pexels.com/video-files/4763824/4763824-hd_1920_1080_24fps.mp4\")",
+      "Bash(ffmpeg -version)",
+      "Bash(ffprobe -v error -show_entries format=duration,size -of default=nw=1 \"c:/Users/Acer/OneDrive/Desktop/syncshi/hero-mountain.mp4\")",
+      "Bash(ffprobe -v error -show_entries format=duration,size -of default=nw=1 \"c:/Users/Acer/OneDrive/Desktop/syncshi/videotrek.mp4\")",
+      "Bash(curl -sL -o ffmpeg.zip \"https://www.gyan.dev/ffmpeg/builds/ffmpeg-release-essentials.zip\")",
+      "Bash(unzip -q -o ffmpeg.zip)",
+      "Bash(curl -sL -A \"Mozilla/5.0 \\(Windows NT 10.0; Win64; x64\\) AppleWebKit/537.36 \\(KHTML, like Gecko\\) Chrome/126.0 Safari/537.36\" -o test.html -w \"%{http_code} %{url_effective}\\\\n\" \"https://www.pexels.com/video/majestic-annapurna-mountain-at-sunrise-35850445/\")",
+      "Bash(C:/Users/Acer/AppData/Local/Temp/claude/c--Users-Acer-OneDrive-Desktop-syncshi/d64fca6c-5b94-4dfc-996a-857b72af22c5/scratchpad/ffmpeg-8.1.2-essentials_build/bin/ffmpeg -y -v error -i C:/Users/Acer/AppData/Local/Temp/claude/c--Users-Acer-OneDrive-Desktop-syncshi/d64fca6c-5b94-4dfc-996a-857b72af22c5/scratchpad/hero-annapurna.mp4 -c:v libx264 -crf 27 -preset slow -pix_fmt yuv420p -movflags +faststart -an C:/Users/Acer/AppData/Local/Temp/claude/c--Users-Acer-OneDrive-Desktop-syncshi/d64fca6c-5b94-4dfc-996a-857b72af22c5/scratchpad/hero-annapurna-web.mp4)",
+      "Bash(C:/Users/Acer/AppData/Local/Temp/claude/c--Users-Acer-OneDrive-Desktop-syncshi/d64fca6c-5b94-4dfc-996a-857b72af22c5/scratchpad/ffmpeg-8.1.2-essentials_build/bin/ffmpeg -y -v error -ss 0.5 -i C:/Users/Acer/AppData/Local/Temp/claude/c--Users-Acer-OneDrive-Desktop-syncshi/d64fca6c-5b94-4dfc-996a-857b72af22c5/scratchpad/hero-annapurna.mp4 -frames:v 1 -q:v 3 C:/Users/Acer/AppData/Local/Temp/claude/c--Users-Acer-OneDrive-Desktop-syncshi/d64fca6c-5b94-4dfc-996a-857b72af22c5/scratchpad/hero-poster.jpg)",
+      "Bash(C:/Users/Acer/AppData/Local/Temp/claude/c--Users-Acer-OneDrive-Desktop-syncshi/d64fca6c-5b94-4dfc-996a-857b72af22c5/scratchpad/ffmpeg-8.1.2-essentials_build/bin/ffmpeg -y -v error -i C:/Users/Acer/AppData/Local/Temp/claude/c--Users-Acer-OneDrive-Desktop-syncshi/d64fca6c-5b94-4dfc-996a-857b72af22c5/scratchpad/hero-annapurna-web.mp4 -vf 'select='\\\\''eq\\(n\\\\,60\\)+eq\\(n\\\\,190\\)+eq\\(n\\\\,320\\)+eq\\(n\\\\,440\\)+eq\\(n\\\\,570\\)+eq\\(n\\\\,700\\)'\\\\'',scale=640:-1,tile=2x3' -vsync 0 -frames:v 1 -q:v 4 C:/Users/Acer/AppData/Local/Temp/claude/c--Users-Acer-OneDrive-Desktop-syncshi/d64fca6c-5b94-4dfc-996a-857b72af22c5/scratchpad/preview-grid.jpg)",
+      "Bash(cp C:/Users/Acer/AppData/Local/Temp/claude/c--Users-Acer-OneDrive-Desktop-syncshi/d64fca6c-5b94-4dfc-996a-857b72af22c5/scratchpad/hero-annapurna-web.mp4 c:/Users/Acer/OneDrive/Desktop/syncshi/hero-annapurna.mp4)",
+      "Bash(cp C:/Users/Acer/AppData/Local/Temp/claude/c--Users-Acer-OneDrive-Desktop-syncshi/d64fca6c-5b94-4dfc-996a-857b72af22c5/scratchpad/hero-poster.jpg c:/Users/Acer/OneDrive/Desktop/syncshi/images/hero-fallback.jpg)"
     ]
   }
 }
