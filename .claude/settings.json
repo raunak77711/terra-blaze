@@ -58,10 +58,12 @@
       "Bash(python -)",
       "Bash(python -c \"import PIL; print\\('Pillow', PIL.__version__\\)\")",
       "Bash(python -c \"import cairosvg; print\\('cairosvg OK'\\)\")",
-      "Bash(python gen_chitwan_images.py)"
+      "Bash(python gen_chitwan_images.py)",
+      "Bash(cd \"c:/Users/Acer/OneDrive/Desktop/syncshi\" && rm __test-trek-*.html && ls trek-*.html css/destination.css js/destination.js && git status --short)"
     ],
     "additionalDirectories": [
-      "c:\\Users\\Acer\\OneDrive\\Desktop\\syncshi"
+      "c:\\Users\\Acer\\OneDrive\\Desktop\\syncshi",
+      "C:\\Users\\Acer\\OneDrive\\Desktop\\syncshi"
     ]
   }
 }
