@@ -98,7 +98,8 @@ document.addEventListener('DOMContentLoaded', () => {
                     circuit: 'Annapurna Circuit (14 Days)',
                     manaslu: 'Manaslu Circuit (14 Days)',
                     langtang: 'Langtang Valley (11 Days)',
-                    ebc: 'Everest Base Camp (14 Days)'
+                    ebc: 'Everest Base Camp (14 Days)',
+                    chitwan: 'Chitwan Jungle Adventure Package (2 Nights / 3 Days)'
                 };
                 const trekLabel = trekInput.tagName === 'SELECT'
                     ? trekInput.options[trekInput.selectedIndex].text
