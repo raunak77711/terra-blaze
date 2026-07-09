@@ -1,7 +1,21 @@
 document.addEventListener('DOMContentLoaded', () => {
+    const isMobile = window.innerWidth < 768;
+
+    // 0. Swap the heavy autoplaying hero background video for its poster
+    // image on mobile, since phones rarely benefit from a multi-MB video
+    // download and mobile browsers already restrict background autoplay.
+    const heroVideo = document.querySelector('.hero-video');
+    if (heroVideo && isMobile) {
+        const poster = heroVideo.getAttribute('poster');
+        const posterImg = document.createElement('img');
+        posterImg.className = heroVideo.className;
+        posterImg.src = poster;
+        posterImg.alt = '';
+        heroVideo.replaceWith(posterImg);
+    }
+
     // 1. Card Hover Autoplay Setup
     const trekCards = document.querySelectorAll('.trek-card');
-    const isMobile = window.innerWidth < 768;
 
     trekCards.forEach(card => {
         const video = card.querySelector('.trek-card-video');

@@ -1388,6 +1388,7 @@ body.dt-body {
     .dt-feature { padding: 1.5rem 1rem; }
     .dt-gallery { grid-template-columns: repeat(2, 1fr); grid-auto-rows: 170px; }
     .dt-g-item:nth-child(1) { grid-column: span 2; }
+    .dt-highlights-grid { grid-template-columns: 1fr; }
     .dt-form-row { grid-template-columns: 1fr; }
     .dt-form-card { padding: 1.8rem 1.4rem; }
     .dt-tl-card { padding: 1.4rem; }

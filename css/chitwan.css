@@ -1254,6 +1254,7 @@ body.cj-body {
     .cj-feature { padding: 1.5rem 1rem; }
     .cj-gallery { grid-template-columns: repeat(2, 1fr); grid-auto-rows: 170px; }
     .cj-g-item:nth-child(1) { grid-column: span 2; }
+    .cj-highlights-grid { grid-template-columns: 1fr; }
     .cj-form-row { grid-template-columns: 1fr; }
     .cj-form-card { padding: 1.8rem 1.4rem; }
     .cj-price-amount { font-size: 3.4rem; }
