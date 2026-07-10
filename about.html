@@ -17,274 +17,16 @@
             box-shadow: var(--shadow-premium);
         }
 
-        .license-grid {
-            display: grid;
-            grid-template-columns: 1fr 1fr;
-            gap: 0.75rem;
-        }
-
-        .license-item {
-            background: var(--bg-light);
-            border-radius: var(--border-radius-sm);
-            padding: 0.9rem 1.1rem;
-            border-left: 3px solid var(--accent);
-        }
-
-        .license-item strong {
-            display: block;
-            font-size: 0.75rem;
-            color: var(--text-muted);
-            text-transform: uppercase;
-            letter-spacing: 0.5px;
-            margin-bottom: 0.25rem;
-        }
-
-        .license-item span {
-            font-weight: 700;
-            color: var(--primary);
-            font-family: var(--font-numbers);
-            font-size: 0.95rem;
-        }
-
-        /* Stats Banner */
-        .stats-banner {
-            background: linear-gradient(135deg, var(--primary-dark) 0%, var(--primary) 60%, #1a6a9a 100%);
-            padding: 5rem 0;
-            color: var(--text-light);
-        }
-
-        .stats-grid {
-            display: grid;
-            grid-template-columns: repeat(4, 1fr);
-            gap: 2rem;
-            text-align: center;
-        }
-
-        .stat-item {
-            padding: 1.5rem 1rem;
-            border-right: 1px solid rgba(255,255,255,0.15);
-        }
-
-        .stat-item:last-child {
-            border-right: none;
-        }
-
-        .stat-number {
-            font-size: 3.2rem;
-            font-weight: 800;
-            color: var(--accent);
-            font-family: var(--font-numbers);
-            line-height: 1;
-            margin-bottom: 0.5rem;
-            display: block;
-        }
-
-        .stat-label {
-            font-size: 1rem;
-            opacity: 0.85;
-            font-weight: 500;
-        }
-
-        /* Value Cards */
-        .value-card {
-            background: var(--bg-white);
-            border-radius: var(--border-radius-lg);
-            padding: 2.5rem 1.8rem;
-            border: 1px solid var(--border-color);
-            box-shadow: var(--shadow-sm);
-            transition: all var(--transition-normal);
-            text-align: center;
-        }
-
-        .value-card:hover {
-            transform: translateY(-8px);
-            box-shadow: var(--shadow-premium);
-            border-color: var(--accent);
-        }
-
-        .value-icon {
-            width: 72px;
-            height: 72px;
-            background: linear-gradient(135deg, var(--primary), var(--primary-light));
-            border-radius: 50%;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            margin: 0 auto 1.5rem auto;
-            box-shadow: 0 6px 20px rgba(15,61,92,0.25);
-        }
-
-        .value-icon svg {
-            width: 34px;
-            height: 34px;
-            fill: var(--accent);
-        }
-
-        /* Guide Cards */
-        .guide-card {
-            background: var(--bg-white);
-            border-radius: var(--border-radius-lg);
-            overflow: hidden;
-            box-shadow: var(--shadow-md);
-            border: 1px solid var(--border-color);
-            transition: all var(--transition-normal);
-        }
-
-        .guide-card:hover {
-            transform: translateY(-10px);
-            box-shadow: var(--shadow-premium);
-        }
-
-        .guide-header {
-            background: linear-gradient(135deg, var(--primary-dark), var(--primary));
-            padding: 3rem 1.5rem 2rem;
-            text-align: center;
-            position: relative;
-            overflow: hidden;
-        }
-
-        .guide-mountain-bg {
-            position: absolute;
-            bottom: 0;
-            left: 0;
-            right: 0;
-            opacity: 0.12;
-        }
-
-        .guide-avatar {
-            width: 110px;
-            height: 110px;
-            border-radius: 50%;
-            border: 4px solid var(--accent);
-            background: var(--primary-light);
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            margin: 0 auto;
-            font-size: 2.4rem;
-            font-weight: 800;
-            color: var(--text-light);
-            font-family: var(--font-numbers);
-            box-shadow: 0 8px 25px rgba(0,0,0,0.35);
-            position: relative;
-            z-index: 2;
-        }
-
-        .guide-body {
-            padding: 1.8rem 1.6rem 2rem;
-        }
-
-        .guide-badges {
-            display: flex;
-            flex-wrap: wrap;
-            gap: 0.4rem;
-            margin-top: 1.2rem;
-        }
-
-        .guide-badge {
-            background: var(--bg-light);
-            border: 1px solid var(--border-color);
-            border-radius: 20px;
-            padding: 0.25rem 0.75rem;
-            font-size: 0.78rem;
-            color: var(--text-muted);
-            font-weight: 600;
-        }
-
-        /* Gallery */
-        .gallery-grid {
-            display: grid;
-            grid-template-columns: repeat(3, 1fr);
-            grid-template-rows: auto auto;
-            gap: 1rem;
-        }
-
-        .gallery-item {
-            overflow: hidden;
-            border-radius: var(--border-radius-md);
-            position: relative;
-            cursor: pointer;
-        }
-
-        .gallery-item img {
-            width: 100%;
-            height: 240px;
-            object-fit: cover;
-            transition: transform var(--transition-slow);
-            display: block;
-        }
-
-        .gallery-item.large {
-            grid-column: span 2;
-        }
-
-        .gallery-item.large img {
-            height: 340px;
-        }
-
-        .gallery-item:hover img {
-            transform: scale(1.08);
-        }
-
-        .gallery-caption {
-            position: absolute;
-            bottom: 0;
-            left: 0;
-            right: 0;
-            background: linear-gradient(to top, rgba(7,34,57,0.92), transparent);
-            color: var(--text-light);
-            padding: 1.8rem 1.2rem 1rem;
-            font-weight: 600;
-            font-size: 0.95rem;
-            opacity: 0;
-            transition: opacity var(--transition-normal);
-        }
-
-        .gallery-item:hover .gallery-caption {
-            opacity: 1;
-        }
-
-        /* CTA */
-        .cta-about {
-            background: linear-gradient(135deg, var(--primary-dark) 0%, var(--primary) 100%);
-            color: var(--text-light);
-            padding: 7rem 0;
-            text-align: center;
-            position: relative;
-            overflow: hidden;
-        }
-
-        .cta-about::before {
-            content: '';
-            position: absolute;
-            top: -50%;
-            left: -10%;
-            width: 50%;
-            height: 200%;
-            background: radial-gradient(ellipse, rgba(232,130,30,0.12), transparent 70%);
-            pointer-events: none;
-        }
-
         @media (max-width: 992px) {
             .about-story-grid { grid-template-columns: 1fr !important; }
             .about-story-img { height: 350px; }
-            .stats-grid { grid-template-columns: repeat(2, 1fr); }
-            .stat-item { border-right: none; border-bottom: 1px solid rgba(255,255,255,0.15); }
-            .stat-item:nth-child(2), .stat-item:last-child { border-bottom: none; }
             .values-grid { grid-template-columns: repeat(2, 1fr) !important; }
             .guides-grid { grid-template-columns: 1fr 1fr !important; }
-            .gallery-grid { grid-template-columns: 1fr 1fr; }
-            .gallery-item.large { grid-column: span 2; }
         }
 
         @media (max-width: 640px) {
-            .stats-grid { grid-template-columns: repeat(2, 1fr); }
-            .license-grid { grid-template-columns: 1fr; }
             .values-grid { grid-template-columns: 1fr !important; }
             .guides-grid { grid-template-columns: 1fr !important; }
-            .gallery-grid { grid-template-columns: 1fr; }
-            .gallery-item.large { grid-column: span 1; }
-            .gallery-item.large img { height: 240px; }
             .cta-btns { flex-direction: column; align-items: center; }
         }
     </style>
@@ -345,10 +87,11 @@
     <!-- Inner Page Hero -->
     <section class="page-hero" aria-label="Page Banner">
         <div class="page-hero-overlay"></div>
-        <img class="page-hero-bg" src="./images/hero-fallback.jpg" alt="Nepal mountains and valleys">
+        <img class="page-hero-bg" src="./images/hero-fallback.jpg" alt="Nepal mountains and valleys" data-parallax="0.18">
         <div class="page-hero-content">
-            <h1 class="page-hero-title">About TerraBlaze</h1>
-            <p class="page-hero-desc">Born in the Himalayas. Built for those who dare to explore them.</p>
+            <p class="page-hero-eyebrow">Est. 2009 &bull; Kathmandu, Nepal</p>
+            <h1 class="page-hero-title">Born in the <em>Himalayas</em></h1>
+            <p class="page-hero-desc">Built for those who dare to explore them — a licensed Nepali agency, 15 years of trail-earned expertise, and a promise to treat every trek as a flagship journey.</p>
         </div>
     </section>
 
@@ -447,48 +190,48 @@
                     <div class="value-icon">
                         <svg viewBox="0 0 24 24"><path d="M12 1L3 5v6c0 5.55 3.84 10.74 9 12 5.16-1.26 9-6.45 9-12V5l-9-4z"/></svg>
                     </div>
-                    <h3 style="font-size: 1.2rem; color: var(--primary); font-weight: 700; margin-bottom: 0.8rem;">Safety First, Always</h3>
-                    <p style="color: var(--text-muted); font-size: 0.93rem; line-height: 1.75;">All guides are certified in wilderness first aid and high-altitude rescue. We carry emergency oxygen, satellite communicators, and maintain 24/7 radio contact on every trek. Your safety is our highest priority — full stop.</p>
+                    <h3 class="value-title">Safety First, Always</h3>
+                    <p class="value-desc">All guides are certified in wilderness first aid and high-altitude rescue. We carry emergency oxygen, satellite communicators, and maintain 24/7 radio contact on every trek. Your safety is our highest priority — full stop.</p>
                 </div>
 
                 <div class="value-card">
                     <div class="value-icon">
                         <svg viewBox="0 0 24 24"><path d="M17 8C8 10 5.9 16.17 3.82 21.34L5.71 22l1-2.3A4.49 4.49 0 0 0 8 20C19 20 22 3 22 3c-1 2-8 3-15 9C3 18 4 20 4 20a17.27 17.27 0 0 1 13-12z"/></svg>
                     </div>
-                    <h3 style="font-size: 1.2rem; color: var(--primary); font-weight: 700; margin-bottom: 0.8rem;">Sustainable Trekking</h3>
-                    <p style="color: var(--text-muted); font-size: 0.93rem; line-height: 1.75;">We follow "Leave No Trace" principles on every route. We partner with eco-certified teahouses, use reusable filtration systems, and donate a portion of every booking to Himalayan trail conservation efforts.</p>
+                    <h3 class="value-title">Sustainable Trekking</h3>
+                    <p class="value-desc">We follow "Leave No Trace" principles on every route. We partner with eco-certified teahouses, use reusable filtration systems, and donate a portion of every booking to Himalayan trail conservation efforts.</p>
                 </div>
 
                 <div class="value-card">
                     <div class="value-icon">
                         <svg viewBox="0 0 24 24"><path d="M11.5 2C6.81 2 3 5.81 3 10.5S6.81 19 11.5 19h.5v3c4.86-2.34 8-7 8-11.5C20 5.81 16.19 2 11.5 2zm1 14.5h-2v-2h2v2zm0-4h-2c0-3.25 3-3 3-5 0-1.1-.9-2-2-2s-2 .9-2 2h-2c0-2.21 1.79-4 4-4s4 1.79 4 4c0 2.5-3 2.75-3 5z"/></svg>
                     </div>
-                    <h3 style="font-size: 1.2rem; color: var(--primary); font-weight: 700; margin-bottom: 0.8rem;">Authentic Cultural Immersion</h3>
-                    <p style="color: var(--text-muted); font-size: 0.93rem; line-height: 1.75;">Our guides are native Nepalis who bring the mountains to life with local folklore, Buddhist traditions, and family teahouse meals. The cultural connection is as much a part of the journey as the altitude.</p>
+                    <h3 class="value-title">Authentic Cultural Immersion</h3>
+                    <p class="value-desc">Our guides are native Nepalis who bring the mountains to life with local folklore, Buddhist traditions, and family teahouse meals. The cultural connection is as much a part of the journey as the altitude.</p>
                 </div>
 
                 <div class="value-card">
                     <div class="value-icon">
                         <svg viewBox="0 0 24 24"><path d="M12 12c2.21 0 4-1.79 4-4s-1.79-4-4-4-4 1.79-4 4 1.79 4 4 4zm0 2c-2.67 0-8 1.34-8 4v2h16v-2c0-2.66-5.33-4-8-4z"/></svg>
                     </div>
-                    <h3 style="font-size: 1.2rem; color: var(--primary); font-weight: 700; margin-bottom: 0.8rem;">Expert Local Guides</h3>
-                    <p style="color: var(--text-muted); font-size: 0.93rem; line-height: 1.75;">Every guide on our team was born and raised in Nepal's mountain communities. Their intimate knowledge of terrain, microclimates, and altitude physiology is built over decades of living at high altitude — not just trekking it.</p>
+                    <h3 class="value-title">Expert Local Guides</h3>
+                    <p class="value-desc">Every guide on our team was born and raised in Nepal's mountain communities. Their intimate knowledge of terrain, microclimates, and altitude physiology is built over decades of living at high altitude — not just trekking it.</p>
                 </div>
 
                 <div class="value-card">
                     <div class="value-icon">
                         <svg viewBox="0 0 24 24"><path d="M16 11c1.66 0 2.99-1.34 2.99-3S17.66 5 16 5c-1.66 0-3 1.34-3 3s1.34 3 3 3zm-8 0c1.66 0 2.99-1.34 2.99-3S9.66 5 8 5C6.34 5 5 6.34 5 8s1.34 3 3 3zm0 2c-2.33 0-7 1.17-7 3.5V19h14v-2.5c0-2.33-4.67-3.5-7-3.5zm8 0c-.29 0-.62.02-.97.05 1.16.84 1.97 1.97 1.97 3.45V19h6v-2.5c0-2.33-4.67-3.5-7-3.5z"/></svg>
                     </div>
-                    <h3 style="font-size: 1.2rem; color: var(--primary); font-weight: 700; margin-bottom: 0.8rem;">Small Groups Promise</h3>
-                    <p style="color: var(--text-muted); font-size: 0.93rem; line-height: 1.75;">We cap every trek at a maximum of 10 trekkers per guide. Smaller groups mean a more personal experience, better trail etiquette, and the individual attention every trekker deserves — especially at high altitude.</p>
+                    <h3 class="value-title">Small Groups Promise</h3>
+                    <p class="value-desc">We cap every trek at a maximum of 10 trekkers per guide. Smaller groups mean a more personal experience, better trail etiquette, and the individual attention every trekker deserves — especially at high altitude.</p>
                 </div>
 
                 <div class="value-card">
                     <div class="value-icon">
                         <svg viewBox="0 0 24 24"><path d="M11.8 10.9c-2.27-.59-3-1.2-3-2.15 0-1.09 1.01-1.85 2.7-1.85 1.78 0 2.44.85 2.5 2.1h2.21c-.07-1.72-1.12-3.3-3.21-3.81V3h-3v2.16c-1.94.42-3.5 1.68-3.5 3.61 0 2.31 1.91 3.46 4.7 4.13 2.5.6 3 1.48 3 2.41 0 .69-.49 1.79-2.7 1.79-2.06 0-2.87-.92-2.98-2.1h-2.2c.12 2.19 1.76 3.42 3.68 3.83V21h3v-2.15c1.95-.37 3.5-1.5 3.5-3.55 0-2.84-2.43-3.81-4.7-4.4z"/></svg>
                     </div>
-                    <h3 style="font-size: 1.2rem; color: var(--primary); font-weight: 700; margin-bottom: 0.8rem;">Transparent Pricing</h3>
-                    <p style="color: var(--text-muted); font-size: 0.93rem; line-height: 1.75;">No hidden costs — ever. Every expense from permits to porter wages is disclosed upfront. We believe in fair pricing that treats our trekkers and our local crew with the same respect and dignity.</p>
+                    <h3 class="value-title">Transparent Pricing</h3>
+                    <p class="value-desc">No hidden costs — ever. Every expense from permits to porter wages is disclosed upfront. We believe in fair pricing that treats our trekkers and our local crew with the same respect and dignity.</p>
                 </div>
 
             </div>
@@ -515,12 +258,12 @@
                         <div class="guide-avatar">PS</div>
                     </div>
                     <div class="guide-body">
-                        <h3 style="font-size: 1.2rem; color: var(--primary); font-weight: 700; margin-bottom: 0.2rem;">Pemba Sherpa</h3>
-                        <p style="color: var(--accent); font-size: 0.82rem; font-weight: 700; text-transform: uppercase; letter-spacing: 0.8px; margin-bottom: 1.1rem;">Senior Mountain Guide</p>
-                        <p style="font-size: 0.93rem; color: var(--text-muted); line-height: 1.75; margin-bottom: 0.5rem;">
+                        <h3 class="guide-name">Pemba Sherpa</h3>
+                        <p class="guide-role">Senior Mountain Guide</p>
+                        <p class="guide-bio">
                             With over 20 years of guiding experience and 5 successful Everest summits, Pemba is the cornerstone of our team. His calm authority under pressure, deep knowledge of high-altitude medicine, and intuitive reading of mountain weather have safely guided hundreds of trekkers to their goals.
                         </p>
-                        <p style="font-size: 0.93rem; color: var(--text-muted); line-height: 1.75;">
+                        <p class="guide-bio">
                             Pemba is also a trained altitude sickness instructor and regularly assists Kathmandu medical clinics with trekker health briefings.
                         </p>
                         <div class="guide-badges">
@@ -542,12 +285,12 @@
                         <div class="guide-avatar" style="background: #1a7ab8;">TS</div>
                     </div>
                     <div class="guide-body">
-                        <h3 style="font-size: 1.2rem; color: var(--primary); font-weight: 700; margin-bottom: 0.2rem;">Tenzing Sherpa</h3>
-                        <p style="color: var(--accent); font-size: 0.82rem; font-weight: 700; text-transform: uppercase; letter-spacing: 0.8px; margin-bottom: 1.1rem;">Lead Trekking Guide</p>
-                        <p style="font-size: 0.93rem; color: var(--text-muted); line-height: 1.75; margin-bottom: 0.5rem;">
+                        <h3 class="guide-name">Tenzing Sherpa</h3>
+                        <p class="guide-role">Lead Trekking Guide</p>
+                        <p class="guide-bio">
                             Tenzing has spent 12 years leading treks across the Annapurna Circuit, Manaslu, and Langtang regions. Fluent in English, Nepali, and Tibetan, he has an encyclopedic knowledge of local flora, fauna, and Buddhist traditions that transforms every trek into a rich cultural discovery.
                         </p>
-                        <p style="font-size: 0.93rem; color: var(--text-muted); line-height: 1.75;">
+                        <p class="guide-bio">
                             He is also a keen wildlife spotter and amateur botanist — rare medicinal plants of the Himalayas are his particular passion.
                         </p>
                         <div class="guide-badges">
@@ -569,12 +312,12 @@
                         <div class="guide-avatar" style="background: #b06018; border-color: var(--primary);">LG</div>
                     </div>
                     <div class="guide-body">
-                        <h3 style="font-size: 1.2rem; color: var(--primary); font-weight: 700; margin-bottom: 0.2rem;">Lhakpa Ghale</h3>
-                        <p style="color: var(--accent); font-size: 0.82rem; font-weight: 700; text-transform: uppercase; letter-spacing: 0.8px; margin-bottom: 1.1rem;">Safety &amp; Rescue Specialist</p>
-                        <p style="font-size: 0.93rem; color: var(--text-muted); line-height: 1.75; margin-bottom: 0.5rem;">
+                        <h3 class="guide-name">Lhakpa Ghale</h3>
+                        <p class="guide-role">Safety &amp; Rescue Specialist</p>
+                        <p class="guide-bio">
                             Lhakpa is our dedicated safety and emergency specialist, certified by the International Red Cross and trained at the Nepal Army Mountain Warfare School. He holds a helicopter evacuation coordination license and has designed the emergency response protocols currently used across all TerraBlaze treks.
                         </p>
-                        <p style="font-size: 0.93rem; color: var(--text-muted); line-height: 1.75;">
+                        <p class="guide-bio">
                             In 15 years, Lhakpa has coordinated over 40 successful high-altitude evacuations — a record the entire team is proud of.
                         </p>
                         <div class="guide-badges">
@@ -631,15 +374,24 @@
         </div>
     </section>
 
+    <!-- Storytelling Quote Band -->
+    <section class="quote-band" aria-label="Our promise">
+        <img class="quote-band-bg" src="./images/circuit-tilicho-lake.jpg" alt="" aria-hidden="true" data-parallax="0.2" onerror="this.remove()">
+        <div class="quote-band-content">
+            <p class="quote-band-text">"We don't just send you up a mountain — we walk every step beside you, from the first permit to the last farewell dinner in Thamel."</p>
+            <p class="quote-band-source">— TerraBlaze Adventures, since 2009</p>
+        </div>
+    </section>
+
     <!-- CTA Section -->
-    <div class="cta-about" role="complementary" aria-label="Call to action">
-        <div class="container" style="position: relative; z-index: 1;">
-            <span class="section-subtitle" style="color: var(--accent);">Ready to Explore?</span>
-            <h2 style="font-size: 2.6rem; font-weight: 800; margin: 0.6rem 0 1.2rem; line-height: 1.25;">Start Your Himalayan Adventure</h2>
-            <p style="font-size: 1.1rem; opacity: 0.85; max-width: 560px; margin: 0 auto 2.5rem auto; line-height: 1.75;">
+    <div class="cta-simple" role="complementary" aria-label="Call to action">
+        <div class="container cta-simple-inner">
+            <span class="section-subtitle">Ready to Explore?</span>
+            <h2 class="cta-simple-title">Start Your Himalayan Adventure</h2>
+            <p class="cta-simple-desc">
                 Whether it's your first trek or your tenth summit, our team is ready to build the perfect itinerary around your goals, fitness level, and timeline. Contact us today for a free consultation.
             </p>
-            <div class="cta-btns" style="display: flex; justify-content: center; gap: 1.5rem; flex-wrap: wrap;">
+            <div class="cta-simple-btns">
                 <a href="treks.html" class="btn btn-primary">Explore Our Treks</a>
                 <a href="contact.html" class="btn btn-secondary">Get in Touch</a>
             </div>

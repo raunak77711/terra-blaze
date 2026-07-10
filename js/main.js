@@ -190,7 +190,9 @@ document.addEventListener('DOMContentLoaded', () => {
             '.blog-card', '.trust-item', '.inc-box', '.exc-box', '.sidebar-card',
             '.blog-sidebar-card', '.blog-featured', '.gallery-item', '.cta-banner-text',
             '.enquiry-form-card', '.form-light-container', '.accordion-item',
-            '.route-map-img', '.filter-section'
+            '.route-map-img', '.filter-section', '.value-card', '.guide-card',
+            '.stat-item', '.quote-band-content', '.cta-simple-inner', '.blog-pill',
+            '.blog-newsletter-card', '.contact-info-card', '.contact-form-card'
         ].join(', ');
 
         const revealEls = document.querySelectorAll(revealSelectors);
@@ -256,5 +258,66 @@ document.addEventListener('DOMContentLoaded', () => {
         indicator.setAttribute('aria-hidden', 'true');
         indicator.innerHTML = '<span class="mouse"></span><span>Scroll</span>';
         hero.appendChild(indicator);
+    }
+
+    // 5e. Site-wide parallax for [data-parallax] background images
+    // (same technique as the Chitwan/destination pages, generalized)
+    const parallaxEls = document.querySelectorAll('[data-parallax]');
+    if (!prefersReducedMotion && parallaxEls.length) {
+        let parallaxTicking = false;
+        const applyParallax = () => {
+            parallaxEls.forEach(el => {
+                const speed = parseFloat(el.getAttribute('data-parallax')) || 0.25;
+                const parent = el.parentElement;
+                const rect = parent.getBoundingClientRect();
+                if (rect.bottom > 0 && rect.top < window.innerHeight) {
+                    const offset = (rect.top + rect.height / 2 - window.innerHeight / 2) * speed;
+                    el.style.transform = 'translate3d(0, ' + offset.toFixed(1) + 'px, 0)';
+                }
+            });
+            parallaxTicking = false;
+        };
+        window.addEventListener('scroll', () => {
+            if (!parallaxTicking) {
+                parallaxTicking = true;
+                requestAnimationFrame(applyParallax);
+            }
+        }, { passive: true });
+        applyParallax();
+    }
+
+    // 5f. Lightweight lightbox for .gallery-item photo grids
+    const lightboxSourceItems = document.querySelectorAll('.gallery-item');
+    if (lightboxSourceItems.length) {
+        const lightbox = document.createElement('div');
+        lightbox.className = 'site-lightbox';
+        lightbox.setAttribute('role', 'dialog');
+        lightbox.setAttribute('aria-label', 'Photo preview');
+        lightbox.innerHTML = '<button class="site-lightbox-close" aria-label="Close preview">&times;</button><img src="" alt="">';
+        document.body.appendChild(lightbox);
+
+        const lightboxImg = lightbox.querySelector('img');
+        const closeLightbox = () => {
+            lightbox.classList.remove('open');
+            document.body.style.overflow = '';
+        };
+
+        lightboxSourceItems.forEach(item => {
+            item.addEventListener('click', () => {
+                const img = item.querySelector('img');
+                if (!img || !img.complete || img.naturalWidth === 0) return;
+                lightboxImg.src = img.src;
+                lightboxImg.alt = img.alt;
+                lightbox.classList.add('open');
+                document.body.style.overflow = 'hidden';
+            });
+        });
+
+        lightbox.addEventListener('click', (e) => {
+            if (e.target !== lightboxImg) closeLightbox();
+        });
+        document.addEventListener('keydown', (e) => {
+            if (e.key === 'Escape') closeLightbox();
+        });
     }
 });

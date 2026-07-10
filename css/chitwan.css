@@ -1026,6 +1026,76 @@ body.cj-body {
 
 .cj-lightbox-close:hover { background: rgba(255, 255, 255, 0.22); }
 
+/* ---------- Testimonials ---------- */
+.cj-testi-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 1.6rem;
+    max-width: 980px;
+    margin: 0 auto;
+}
+
+.cj-testi {
+    position: relative;
+    background: var(--cj-glass);
+    backdrop-filter: blur(14px);
+    -webkit-backdrop-filter: blur(14px);
+    border: 1px solid rgba(255, 255, 255, 0.55);
+    border-radius: var(--border-radius-lg);
+    padding: 2.2rem;
+    box-shadow: 0 10px 30px -14px rgba(11, 35, 24, 0.25);
+    transition: transform 0.45s var(--cj-ease), box-shadow 0.45s var(--cj-ease);
+}
+
+.cj-testi:hover {
+    transform: translateY(-8px);
+    box-shadow: var(--cj-shadow);
+}
+
+.cj-testi-stars {
+    color: var(--cj-gold);
+    letter-spacing: 0.25em;
+    font-size: 0.95rem;
+    margin-bottom: 1rem;
+}
+
+.cj-testi-quote {
+    font-family: var(--cj-serif);
+    font-style: italic;
+    font-size: 1.02rem;
+    color: var(--cj-ink);
+    line-height: 1.7;
+    margin-bottom: 1.5rem;
+}
+
+.cj-testi-author {
+    display: flex;
+    align-items: center;
+    gap: 0.9rem;
+}
+
+.cj-testi-avatar {
+    width: 46px;
+    height: 46px;
+    border-radius: 50%;
+    flex-shrink: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: linear-gradient(140deg, var(--cj-forest), var(--cj-leaf));
+    color: var(--cj-gold-soft);
+    font-weight: 700;
+    font-size: 0.85rem;
+    letter-spacing: 0.05em;
+}
+
+.cj-testi-info h4 { font-size: 0.95rem; color: var(--cj-forest); margin-bottom: 0.1rem; }
+.cj-testi-info p { font-size: 0.8rem; color: var(--cj-muted); }
+
+@media (max-width: 860px) {
+    .cj-testi-grid { grid-template-columns: 1fr; }
+}
+
 /* ---------- FAQ (builds on global accordion styles) ---------- */
 .cj-faq-wrap { max-width: 860px; margin: 0 auto; }
 

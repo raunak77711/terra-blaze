@@ -59,35 +59,52 @@
     <!-- Inner Page Hero -->
     <section class="page-hero" aria-label="Page Banner">
         <div class="page-hero-overlay"></div>
-        <img class="page-hero-bg" src="./images/hero-fallback.jpg" alt="Legal policies background">
+        <img class="page-hero-bg" src="./images/hero-fallback.jpg" alt="Legal policies background" data-parallax="0.18">
         <div class="page-hero-content">
-            <h1 class="page-hero-title">Policies, Terms & Conditions</h1>
-            <p class="page-hero-desc">Rules, booking policy, and cancellation terms to follow when traveling with TerraBlaze Adventures.</p>
+            <p class="page-hero-eyebrow">Transparent &amp; Fair</p>
+            <h1 class="page-hero-title">Policies &amp; <em>Terms</em></h1>
+            <p class="page-hero-desc">Clear rules on privacy, booking, and cancellations — no fine print surprises when you travel with us.</p>
         </div>
     </section>
 
+    <!-- Sticky Section Nav -->
+    <nav class="legal-nav" aria-label="Policy sections">
+        <div class="container legal-nav-inner">
+            <a href="#privacy" class="legal-nav-link">Privacy Policy</a>
+            <a href="#terms" class="legal-nav-link">Terms &amp; Conditions</a>
+            <a href="#booking" class="legal-nav-link">Booking Policy</a>
+            <a href="#cancellation" class="legal-nav-link">Cancellation Policy</a>
+        </div>
+    </nav>
+
     <!-- Policy Sections -->
     <section class="section">
-        <div class="container" style="max-width: 900px; display: flex; flex-direction: column; gap: 4rem;">
-            
+        <div class="container" style="max-width: 900px; display: flex; flex-direction: column; gap: 2.5rem;">
+
             <!-- Privacy Policy -->
-            <div id="privacy" style="scroll-margin-top: 100px;">
-                <h2 style="font-size: 1.8rem; color: var(--primary); font-weight: 800; border-bottom: 2px solid var(--accent); padding-bottom: 0.5rem; margin-bottom: 1.2rem;">Privacy Policy</h2>
-                <p style="margin-bottom: 1rem; color: var(--text-dark);">
+            <div id="privacy" class="legal-section" style="scroll-margin-top: 140px;">
+                <div class="legal-section-head">
+                    <span class="legal-section-icon"><svg viewBox="0 0 24 24"><path d="M12 1L3 5v6c0 5.55 3.84 10.74 9 12 5.16-1.26 9-6.45 9-12V5l-9-4z"/></svg></span>
+                    <h2 class="legal-section-title">Privacy Policy</h2>
+                </div>
+                <p>
                     At TerraBlaze Adventures, we protect and respect our clients' personal details and privacy. Any information we collect—such as your name, email, phone number, passport copy, and health details—is used solely for securing trekking permits and managing your bookings.
                 </p>
-                <p style="color: var(--text-dark);">
+                <p>
                     We never sell, trade, or distribute your personal information to third parties or advertisers. All details are stored on secure servers in compliance with security standards.
                 </p>
             </div>
 
             <!-- Terms & Conditions -->
-            <div id="terms" style="scroll-margin-top: 100px;">
-                <h2 style="font-size: 1.8rem; color: var(--primary); font-weight: 800; border-bottom: 2px solid var(--accent); padding-bottom: 0.5rem; margin-bottom: 1.2rem;">Terms & Conditions</h2>
-                <p style="margin-bottom: 1rem; color: var(--text-dark);">
+            <div id="terms" class="legal-section" style="scroll-margin-top: 140px;">
+                <div class="legal-section-head">
+                    <span class="legal-section-icon"><svg viewBox="0 0 24 24"><path d="M14 2H6c-1.1 0-1.99.9-1.99 2L4 20c0 1.1.89 2 2 2h12c1.1 0 2-.9 2-2V8l-6-6zm2 16H8v-2h8v2zm0-4H8v-2h8v2zm-3-5V3.5L18.5 9H13z"/></svg></span>
+                    <h2 class="legal-section-title">Terms &amp; Conditions</h2>
+                </div>
+                <p>
                     Please read the following terms and conditions carefully before booking a trip with our agency:
                 </p>
-                <ul style="list-style-type: disc; padding-left: 1.5rem; display: flex; flex-direction: column; gap: 0.8rem; color: var(--text-dark);">
+                <ul>
                     <li>Trekkers must provide a valid copy of their passport and accurate details when booking.</li>
                     <li>Weather in the Himalayas is unpredictable; schedules and itineraries may change due to natural conditions. In such cases, the guide's decision will be final and binding.</li>
                     <li>The company reserves the right to terminate a trek midway for safety reasons if a trekker acts against the guide's advice or violates safety regulations.</li>
@@ -96,23 +113,29 @@
             </div>
 
             <!-- Booking Policy -->
-            <div id="booking" style="scroll-margin-top: 100px;">
-                <h2 style="font-size: 1.8rem; color: var(--primary); font-weight: 800; border-bottom: 2px solid var(--accent); padding-bottom: 0.5rem; margin-bottom: 1.2rem;">Booking Policy</h2>
-                <p style="margin-bottom: 1rem; color: var(--text-dark);">
+            <div id="booking" class="legal-section" style="scroll-margin-top: 140px;">
+                <div class="legal-section-head">
+                    <span class="legal-section-icon"><svg viewBox="0 0 24 24"><path d="M17 12h-5v5h5v-5zM16 1v2H8V1H6v2H5c-1.11 0-1.99.9-1.99 2L3 19c0 1.1.89 2 2 2h14c1.1 0 2-.9 2-2V5c0-1.1-.9-2-2-2h-1V3h-2zm3 18H5V8h14v11z"/></svg></span>
+                    <h2 class="legal-section-title">Booking Policy</h2>
+                </div>
+                <p>
                     To secure your booking, a <strong>20% advance payment</strong> of the total trip cost is required. This deposit is used to secure permits, domestic flight tickets, and hotel bookings.
                 </p>
-                <p style="color: var(--text-dark);">
+                <p>
                     The remaining 80% can be paid upon your arrival in Kathmandu in cash or via bank transfer.
                 </p>
             </div>
 
             <!-- Cancellation Policy -->
-            <div id="cancellation" style="scroll-margin-top: 100px;">
-                <h2 style="font-size: 1.8rem; color: var(--primary); font-weight: 800; border-bottom: 2px solid var(--accent); padding-bottom: 0.5rem; margin-bottom: 1.2rem;">Cancellation Policy</h2>
-                <p style="margin-bottom: 1rem; color: var(--text-dark);">
+            <div id="cancellation" class="legal-section" style="scroll-margin-top: 140px;">
+                <div class="legal-section-head">
+                    <span class="legal-section-icon"><svg viewBox="0 0 24 24"><path d="M19 6.41L17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12z"/></svg></span>
+                    <h2 class="legal-section-title">Cancellation Policy</h2>
+                </div>
+                <p>
                     If you need to cancel your trip for any reason, the following conditions will apply:
                 </p>
-                <ul style="list-style-type: disc; padding-left: 1.5rem; display: flex; flex-direction: column; gap: 0.8rem; color: var(--text-dark);">
+                <ul>
                     <li><strong>Cancellation 30 days or more before departure:</strong> 90% of the advance deposit will be refunded.</li>
                     <li><strong>Cancellation 15-29 days before departure:</strong> 50% of the advance deposit will be refunded.</li>
                     <li><strong>Cancellation 14 days or less before departure:</strong> No refund will be provided for the advance deposit.</li>
