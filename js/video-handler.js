@@ -1,18 +1,8 @@
 document.addEventListener('DOMContentLoaded', () => {
     const isMobile = window.innerWidth < 768;
 
-    // 0. Swap the heavy autoplaying hero background video for its poster
-    // image on mobile, since phones rarely benefit from a multi-MB video
-    // download and mobile browsers already restrict background autoplay.
-    const heroVideo = document.querySelector('.hero-video');
-    if (heroVideo && isMobile) {
-        const poster = heroVideo.getAttribute('poster');
-        const posterImg = document.createElement('img');
-        posterImg.className = heroVideo.className;
-        posterImg.src = poster;
-        posterImg.alt = '';
-        heroVideo.replaceWith(posterImg);
-    }
+    // The hero montage is handled entirely by hero-cinema.js (including
+    // its own mobile / Save-Data / reduced-motion fallbacks).
 
     // 1. Card Hover Autoplay Setup
     const trekCards = document.querySelectorAll('.trek-card');

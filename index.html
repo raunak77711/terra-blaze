@@ -64,15 +64,14 @@
         </div>
     </header>
 
-    <!-- Hero Section with Background Video -->
-    <section class="hero" aria-label="Main Video Banner">
-        <div class="hero-video-container">
-            <video class="hero-video" autoplay muted loop playsinline preload="auto"
-                poster="./images/hero-fallback.jpg">
-                <source src="./hero-annapurna.mp4" type="video/mp4">
-                Your browser does not support the video tag.
-            </video>
-            <div class="hero-overlay"></div>
+    <!-- Hero Section — cinematic Himalayan film montage -->
+    <section class="hero" aria-label="Cinematic film of Nepal's Himalayas">
+        <div class="hero-cinema" id="hero-cinema" aria-hidden="true">
+            <img class="hero-poster" src="./images/hero-fallback.jpg" alt="" fetchpriority="high">
+            <video class="hero-film" muted loop playsinline preload="auto" tabindex="-1"></video>
+            <video class="hero-film" muted loop playsinline preload="none" tabindex="-1"></video>
+            <div class="hero-grade"></div>
+            <div class="hero-grain"></div>
         </div>
 
         <div class="hero-content">
@@ -80,7 +79,7 @@
                 <svg viewBox="0 0 24 24" width="15" height="15" fill="currentColor"><path d="M14 6l-3.75 5 2.85 3.8-1.6 1.2C9.81 13.75 7 10 7 10l-6 8h22L14 6z"/></svg>
                 Adventure Travel in Nepal
             </span>
-            <h1 class="hero-title">Travel More.<br><em>Explore Deeper.</em></h1>
+            <h1 class="hero-title">Trek More.<br><em>Explore Deeper.</em></h1>
             <p class="hero-description">
                 Unforgettable treks in the heart of the Himalayas. Experience Nepal's breathtaking mountain ranges,
                 glaciers, and rich cultural heritage with TerraBlaze Adventures — a flagship journey for every trail we lead.
@@ -90,6 +89,29 @@
                 <a href="contact.html" class="btn btn-secondary">Email Enquiry</a>
             </div>
         </div>
+
+        <div class="hero-scenebar" aria-hidden="true">
+            <p class="hero-scene-label">
+                <span class="hero-scene-no" id="hero-scene-no">01</span>
+                <span class="hero-scene-caption" id="hero-scene-caption">First light over the Himalaya</span>
+            </p>
+            <div class="hero-ticks" id="hero-ticks"></div>
+        </div>
+
+        <script type="application/json" id="hero-clips">
+        {
+            "hold": 4400,
+            "fade": 1500,
+            "clips": [
+                { "src": "./assets/video/clip-01.mp4", "caption": "First light over the Himalaya", "mobile": true },
+                { "src": "./assets/video/clip-02.mp4", "caption": "The high snows of the Khumbu" },
+                { "src": "./assets/video/clip-03.mp4", "caption": "Forest trails of the middle hills", "mobile": true },
+                { "src": "./assets/video/clip-04.mp4", "caption": "Waterfalls born of glacier melt" },
+                { "src": "./assets/video/clip-05.mp4", "caption": "Wild rivers of the lowlands" },
+                { "src": "./assets/video/clip-06.mp4", "caption": "Alone above the clouds", "mobile": true }
+            ]
+        }
+        </script>
     </section>
 
     <!-- Trust Strip (Statistics) -->
@@ -132,7 +154,7 @@
                         <span class="trek-card-badge">Popular</span>
                         <img class="trek-card-img" src="./images/abc-thumb.jpg" alt="Scenic view of Annapurna Base Camp"
                             loading="lazy">
-                        <video class="trek-card-video" src="./videotrek.mp4" muted loop playsinline
+                        <video class="trek-card-video" src="./assets/video/page-greenery.mp4" muted loop playsinline
                             preload="none"></video>
                     </div>
                     <div class="trek-card-content">
@@ -172,7 +194,7 @@
                     <div class="trek-card-media">
                         <img class="trek-card-img" src="./images/circuit-thumb.jpg"
                             alt="Thorong La Pass and Tilicho Lake trail" loading="lazy">
-                        <video class="trek-card-video" src="./videotrek.mp4" muted loop playsinline
+                        <video class="trek-card-video" src="./assets/video/page-flags.mp4" muted loop playsinline
                             preload="none"></video>
                     </div>
                     <div class="trek-card-content">
@@ -212,7 +234,7 @@
                     <div class="trek-card-media">
                         <img class="trek-card-img" src="./images/manaslu-thumb.jpg"
                             alt="Mt. Manaslu and Larkya La Pass view" loading="lazy">
-                        <video class="trek-card-video" src="./videotrek.mp4" muted loop playsinline
+                        <video class="trek-card-video" src="./assets/video/clip-06.mp4" muted loop playsinline
                             preload="none"></video>
                     </div>
                     <div class="trek-card-content">
@@ -252,7 +274,7 @@
                     <div class="trek-card-media">
                         <img class="trek-card-img" src="./images/langtang-thumb.jpg"
                             alt="Langtang Valley and Kyanjin Gompa" loading="lazy">
-                        <video class="trek-card-video" src="./videotrek.mp4" muted loop playsinline
+                        <video class="trek-card-video" src="./assets/video/clip-03.mp4" muted loop playsinline
                             preload="none"></video>
                     </div>
                     <div class="trek-card-content">
@@ -293,7 +315,7 @@
                         <span class="trek-card-badge">Famous</span>
                         <img class="trek-card-img" src="./images/ebc-thumb.jpg"
                             alt="Mt. Everest view from Namche Bazaar" loading="lazy">
-                        <video class="trek-card-video" src="./videotrek.mp4" muted loop playsinline
+                        <video class="trek-card-video" src="./assets/video/clip-02.mp4" muted loop playsinline
                             preload="none"></video>
                     </div>
                     <div class="trek-card-content">
@@ -614,6 +636,7 @@
     <!-- Scripts -->
     <script src="./js/main.js"></script>
     <script src="./js/video-handler.js"></script>
+    <script src="./js/hero-cinema.js"></script>
 </body>
 
 </html>

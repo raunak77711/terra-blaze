@@ -1,5 +1,3 @@
-@import url('https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,500;0,600;0,700;1,500&display=swap');
-
 /* ============================================================
    Destination pages — shared premium theme (.dt-*)
    Same design language as tour-chitwan.html (chitwan.css),
@@ -15,7 +13,7 @@
     --dt-glass: rgba(255, 255, 255, 0.72);
     --dt-glass-border: rgba(255, 255, 255, 0.35);
 
-    --dt-serif: 'Playfair Display', Georgia, serif;
+    --dt-serif: 'Poppins', 'Noto Sans Devanagari', sans-serif;
     --dt-ease: cubic-bezier(0.22, 1, 0.36, 1);
 }
 
@@ -154,8 +152,9 @@ body.dt-body {
 
 .dt-title {
     font-family: var(--dt-serif);
-    font-size: clamp(1.9rem, 4vw, 2.7rem);
+    font-size: clamp(1.85rem, 3.6vw, 2.5rem);
     font-weight: 600;
+    letter-spacing: -0.02em;
     line-height: 1.2;
     color: var(--dt-base);
     margin-bottom: 0.9rem;
@@ -301,23 +300,24 @@ body.dt-body {
 
 .dt-hero-title {
     font-family: var(--dt-serif);
-    font-size: clamp(2.5rem, 6.5vw, 4.6rem);
+    font-size: clamp(2.4rem, 5.8vw, 4.1rem);
     font-weight: 600;
+    letter-spacing: -0.02em;
     line-height: 1.12;
     margin: 1.6rem 0 1.2rem;
-    text-shadow: 0 4px 30px rgba(0, 0, 0, 0.45);
+    text-shadow: 0 3px 24px rgba(0, 0, 0, 0.4);
     animation: dtFadeUp 0.9s 0.15s var(--dt-ease) both;
 }
 
 .dt-hero-title em {
-    font-style: italic;
+    font-style: normal;
     color: var(--dt-gold-soft);
 }
 
 .dt-hero-sub {
-    font-size: clamp(1rem, 2vw, 1.2rem);
-    font-weight: 300;
-    letter-spacing: 0.16em;
+    font-size: clamp(1rem, 2vw, 1.15rem);
+    font-weight: 400;
+    letter-spacing: 0.12em;
     text-transform: uppercase;
     color: rgba(255, 255, 255, 0.88);
     animation: dtFadeUp 0.9s 0.3s var(--dt-ease) both;
@@ -428,7 +428,7 @@ body.dt-body {
 .dt-fact-value {
     display: block;
     font-size: 1.02rem;
-    font-weight: 700;
+    font-weight: 600;
     color: var(--dt-base);
 }
 
@@ -450,16 +450,6 @@ body.dt-body {
     font-size: 0.98rem;
     color: var(--dt-muted);
     line-height: 1.85;
-}
-
-.dt-overview-text::first-letter {
-    font-family: var(--dt-serif);
-    font-size: 3.4em;
-    font-weight: 600;
-    float: left;
-    line-height: 0.82;
-    padding: 0.08em 0.14em 0 0;
-    color: var(--dt-gold-deep);
 }
 
 .dt-points {
@@ -612,8 +602,9 @@ body.dt-body {
 
 .dt-card-title {
     font-family: var(--dt-serif);
-    font-size: 1.35rem;
+    font-size: 1.3rem;
     font-weight: 600;
+    letter-spacing: -0.01em;
     color: var(--dt-base);
     margin-bottom: 0.7rem;
 }
@@ -719,7 +710,7 @@ body.dt-body {
 .dt-tl-day {
     display: inline-block;
     font-size: 0.7rem;
-    font-weight: 700;
+    font-weight: 600;
     letter-spacing: 0.2em;
     text-transform: uppercase;
     color: #fff;
@@ -731,8 +722,9 @@ body.dt-body {
 
 .dt-tl-title {
     font-family: var(--dt-serif);
-    font-size: 1.3rem;
+    font-size: 1.25rem;
     font-weight: 600;
+    letter-spacing: -0.01em;
     color: var(--dt-base);
     margin-bottom: 0.8rem;
     line-height: 1.3;
@@ -761,8 +753,40 @@ body.dt-body {
     border-radius: 0 10px 10px 0;
     font-size: 0.83rem;
     color: var(--dt-muted);
-    font-style: italic;
 }
+
+/* Day photo sitting beside the card text */
+.dt-tl-card--photo {
+    display: flex;
+    gap: 1.4rem;
+    align-items: stretch;
+}
+
+.dt-tl-card--photo .dt-tl-body {
+    flex: 1 1 auto;
+    min-width: 0;
+}
+
+.dt-tl-photo {
+    flex: 0 0 160px;
+    position: relative;
+    margin: 0;
+    border-radius: 14px;
+    overflow: hidden;
+    min-height: 200px;
+    box-shadow: 0 12px 28px -14px rgba(var(--dt-deep-rgb), 0.45);
+}
+
+.dt-tl-photo img {
+    position: absolute;
+    inset: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: transform 0.6s var(--dt-ease);
+}
+
+.dt-tl-item:hover .dt-tl-photo img { transform: scale(1.07); }
 
 /* ---------- Inclusions / exclusions ---------- */
 .dt-incexc-grid {
@@ -798,7 +822,9 @@ body.dt-body {
     align-items: center;
     gap: 0.7rem;
     font-family: var(--dt-serif);
-    font-size: 1.3rem;
+    font-size: 1.25rem;
+    font-weight: 600;
+    letter-spacing: -0.01em;
     color: #fff;
     margin-bottom: 1.4rem;
 }
@@ -872,7 +898,7 @@ body.dt-body {
 
 .dt-feature h3 {
     font-size: 0.98rem;
-    font-weight: 700;
+    font-weight: 600;
     color: var(--dt-base);
     margin-bottom: 0.4rem;
 }
@@ -912,11 +938,12 @@ body.dt-body {
 
 .dt-band-quote {
     font-family: var(--dt-serif);
-    font-style: italic;
-    font-size: clamp(1.4rem, 3.2vw, 2.1rem);
-    line-height: 1.45;
+    font-weight: 500;
+    font-size: clamp(1.3rem, 2.8vw, 1.9rem);
+    letter-spacing: -0.01em;
+    line-height: 1.5;
     margin-bottom: 1.2rem;
-    text-shadow: 0 2px 18px rgba(0, 0, 0, 0.5);
+    text-shadow: 0 2px 16px rgba(0, 0, 0, 0.45);
 }
 
 .dt-band-source {
@@ -1071,8 +1098,7 @@ body.dt-body {
 
 .dt-testi-quote {
     font-family: var(--dt-serif);
-    font-style: italic;
-    font-size: 1.02rem;
+    font-size: 1rem;
     color: var(--dt-ink);
     line-height: 1.7;
     margin-bottom: 1.5rem;
@@ -1094,7 +1120,7 @@ body.dt-body {
     justify-content: center;
     background: linear-gradient(140deg, var(--dt-base), var(--dt-accent));
     color: var(--dt-gold-soft);
-    font-weight: 700;
+    font-weight: 600;
     font-size: 0.85rem;
     letter-spacing: 0.05em;
 }
@@ -1267,7 +1293,9 @@ body.dt-body {
 
 .dt-form-title {
     font-family: var(--dt-serif);
-    font-size: 1.45rem;
+    font-weight: 600;
+    letter-spacing: -0.01em;
+    font-size: 1.4rem;
     color: #fff;
     margin-bottom: 0.4rem;
 }
@@ -1392,6 +1420,8 @@ body.dt-body {
     .dt-form-row { grid-template-columns: 1fr; }
     .dt-form-card { padding: 1.8rem 1.4rem; }
     .dt-tl-card { padding: 1.4rem; }
+    .dt-tl-card--photo { flex-direction: column; gap: 1.1rem; }
+    .dt-tl-photo { flex-basis: auto; order: -1; width: 100%; min-height: 0; height: 180px; }
     .dt-tl-item, .dt-tl-item:nth-child(even) { padding-left: 3.9rem; }
     .dt-tl-marker { width: 46px; height: 46px; top: 2.2rem; }
     .dt-tl-marker svg { width: 20px; height: 20px; }
@@ -1407,5 +1437,5 @@ body.dt-body {
     .dt-hero-scroll { animation: none; }
     .dt-btn--gold::after { animation: none; }
     [data-dt-reveal] { opacity: 1; transform: none; transition: none; }
-    .dt-card, .dt-feature, .dt-tl-card, .dt-testi, .dt-g-item img, .dt-btn { transition: none; }
+    .dt-card, .dt-feature, .dt-tl-card, .dt-testi, .dt-g-item img, .dt-tl-photo img, .dt-btn { transition: none; }
 }

@@ -59,11 +59,40 @@
       "Bash(python -c \"import PIL; print\\('Pillow', PIL.__version__\\)\")",
       "Bash(python -c \"import cairosvg; print\\('cairosvg OK'\\)\")",
       "Bash(python gen_chitwan_images.py)",
-      "Bash(cd \"c:/Users/Acer/OneDrive/Desktop/syncshi\" && rm __test-trek-*.html && ls trek-*.html css/destination.css js/destination.js && git status --short)"
+      "Bash(cd \"c:/Users/Acer/OneDrive/Desktop/syncshi\" && rm __test-trek-*.html && ls trek-*.html css/destination.css js/destination.js && git status --short)",
+      "Bash(echo \"exit: $?\")",
+      "Bash(node --check js/hero-cinema.js)",
+      "Bash(node --check js/video-handler.js)",
+      "Bash(python -c \"import json,re; html=open\\('index.html',encoding='utf-8'\\).read\\(\\); m=re.search\\(r'<script type=\\\\\"application/json\\\\\" id=\\\\\"hero-clips\\\\\">\\(.*?\\)</script>', html, re.S\\); json.loads\\(m.group\\(1\\)\\); print\\('JSON-OK'\\)\")",
+      "Bash(\"C:/Program Files \\(x86\\)/Microsoft/Edge/Application/msedge.exe\" --headless=new --disable-gpu --window-size=1440,900 --hide-scrollbars --virtual-time-budget=9000 --screenshot=hero-desktop.png \"http://localhost:8613/index.html\")",
+      "Bash(mkdir -p \"C:/Users/Acer/edge-shots\")",
+      "Read(//c/Users/Acer/**)",
+      "Bash(\"C:/Program Files \\(x86\\)/Microsoft/Edge/Application/msedge.exe\" --headless=new --disable-gpu --window-size=1440,900 --hide-scrollbars --virtual-time-budget=9000 --screenshot=\"C:\\\\Users\\\\Acer\\\\edge-shots\\\\hero-desktop.png\" \"http://localhost:8613/index.html\")",
+      "Read(//c/Users/Acer/edge-shots/**)",
+      "Bash(\"C:/Program Files \\(x86\\)/Microsoft/Edge/Application/msedge.exe\" --headless=new --disable-gpu --window-size=1440,900 --hide-scrollbars --virtual-time-budget=13000 --screenshot=\"C:\\\\Users\\\\Acer\\\\edge-shots\\\\hero-scene2.png\" \"http://localhost:8613/index.html\")",
+      "Bash(\"C:/Program Files \\(x86\\)/Microsoft/Edge/Application/msedge.exe\" --headless=new --disable-gpu --window-size=500,900 --hide-scrollbars --virtual-time-budget=9000 --screenshot=\"C:\\\\Users\\\\Acer\\\\edge-shots\\\\hero-mobile.png\" \"http://localhost:8613/index.html\")",
+      "Bash(\"C:/Program Files \\(x86\\)/Microsoft/Edge/Application/msedge.exe\" --headless=new --disable-gpu --window-size=1440,2400 --hide-scrollbars --virtual-time-budget=7000 --screenshot=\"C:\\\\Users\\\\Acer\\\\edge-shots\\\\treks-cards.png\" \"http://localhost:8613/treks.html\")",
+      "Bash(\"C:/Program Files \\(x86\\)/Microsoft/Edge/Application/msedge.exe\" --headless=new --disable-gpu --window-size=1440,900 --hide-scrollbars --autoplay-policy=no-user-gesture-required --virtual-time-budget=30000 --screenshot=\"C:\\\\Users\\\\Acer\\\\edge-shots\\\\hero-scene3.png\" \"http://localhost:8613/index.html\")",
+      "Bash(\"C:/Program Files \\(x86\\)/Microsoft/Edge/Application/msedge.exe\" --headless=new --disable-gpu --autoplay-policy=no-user-gesture-required --virtual-time-budget=30000 --dump-dom \"http://localhost:8613/index.html\")",
+      "Bash(\"C:/Program Files \\(x86\\)/Microsoft/Edge/Application/msedge.exe\" --headless=new --disable-gpu --virtual-time-budget=20000 --dump-dom \"http://localhost:8613/_probe.html\")",
+      "Bash(curl -s -o /dev/null -w \"%{http_code}\\\\n\" http://localhost:8614/index.html)",
+      "Bash(\"C:/Program Files \\(x86\\)/Microsoft/Edge/Application/msedge.exe\" --headless=new --disable-gpu --autoplay-policy=no-user-gesture-required --window-size=1400,1000 --dump-dom \"http://localhost:8614/_probe2.html\")",
+      "Bash(cd \"c:/Users/Acer/OneDrive/Desktop/syncshi\" && rm _probe.html _probe2.html && rm -rf \"C:/Users/Acer/edge-shots\")",
+      "PowerShell($pids = Get-NetTCPConnection -LocalPort 8613,8614 -State Listen -ErrorAction SilentlyContinue | Select-Object -ExpandProperty OwningProcess -Unique; foreach \\($p in $pids\\) { try { Stop-Process -Id $p -Force -Confirm:$false -ErrorAction Stop; \"killed $p\" } catch { \"skip $p\" } })",
+      "Read(//c/Users/Acer/.claude/skills/**)",
+      "Bash(where.exe msedge *)",
+      "Read(//c/Program Files \\\\\\(x86\\\\\\)/Microsoft/Edge/Application/**)",
+      "Read(//c/Program Files/Google/Chrome/Application/**)",
+      "Bash(python -m http.server 8742)",
+      "Bash('/c/Program Files/Google/Chrome/Application/chrome.exe' --headless=new --disable-gpu --hide-scrollbars --window-size=1440,2400 --virtual-time-budget=9000 --screenshot=/c/Users/Acer/AppData/Local/Temp/claude/c--Users-Acer-OneDrive-Desktop-syncshi/d9df6418-2a71-4f16-afaa-db9dbf9e7a24/scratchpad/home-treks.png 'http://localhost:8742/index.html#treks')",
+      "Bash('/c/Program Files/Google/Chrome/Application/chrome.exe' --headless=new --disable-gpu --hide-scrollbars --window-size=1440,2400 --virtual-time-budget=9000 --screenshot=/c/Users/Acer/AppData/Local/Temp/claude/c--Users-Acer-OneDrive-Desktop-syncshi/d9df6418-2a71-4f16-afaa-db9dbf9e7a24/scratchpad/blog.png http://localhost:8742/blog.html)",
+      "Read(//c/Users/Acer/AppData/Local/Temp/claude/c--Users-Acer-OneDrive-Desktop-syncshi/d9df6418-2a71-4f16-afaa-db9dbf9e7a24/scratchpad/**)",
+      "Bash('/c/Program Files/Google/Chrome/Application/chrome.exe' --headless=new --disable-gpu --hide-scrollbars --window-size=1440,7000 --virtual-time-budget=12000 --screenshot=/c/Users/Acer/AppData/Local/Temp/claude/c--Users-Acer-OneDrive-Desktop-syncshi/d9df6418-2a71-4f16-afaa-db9dbf9e7a24/scratchpad/home-full.png http://localhost:8742/index.html)"
     ],
     "additionalDirectories": [
       "c:\\Users\\Acer\\OneDrive\\Desktop\\syncshi",
-      "C:\\Users\\Acer\\OneDrive\\Desktop\\syncshi"
+      "C:\\Users\\Acer\\OneDrive\\Desktop\\syncshi",
+      "C:\\Users\\Acer\\edge-shots"
     ]
   }
 }

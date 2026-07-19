@@ -1,5 +1,3 @@
-@import url('https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,500;0,600;0,700;1,500&display=swap');
-
 /* ============================================================
    Chitwan Jungle Adventure Package — scoped page theme (.cj-*)
    Loaded only on tour-chitwan.html, after styles.css
@@ -28,7 +26,7 @@
     --cj-shadow: 0 18px 45px -18px rgba(11, 35, 24, 0.35);
     --cj-shadow-gold: 0 12px 30px -10px rgba(184, 134, 58, 0.45);
 
-    --cj-serif: 'Playfair Display', Georgia, serif;
+    --cj-serif: 'Poppins', 'Noto Sans Devanagari', sans-serif;
     --cj-ease: cubic-bezier(0.22, 1, 0.36, 1);
 }
 
@@ -93,8 +91,9 @@ body.cj-body {
 
 .cj-title {
     font-family: var(--cj-serif);
-    font-size: clamp(1.9rem, 4vw, 2.7rem);
+    font-size: clamp(1.85rem, 3.6vw, 2.5rem);
     font-weight: 600;
+    letter-spacing: -0.02em;
     line-height: 1.2;
     color: var(--cj-forest);
     margin-bottom: 0.9rem;
@@ -240,16 +239,17 @@ body.cj-body {
 
 .cj-hero-title {
     font-family: var(--cj-serif);
-    font-size: clamp(2.5rem, 6.5vw, 4.6rem);
+    font-size: clamp(2.4rem, 5.8vw, 4.1rem);
     font-weight: 600;
+    letter-spacing: -0.02em;
     line-height: 1.12;
     margin: 1.6rem 0 1.2rem;
-    text-shadow: 0 4px 30px rgba(0, 0, 0, 0.45);
+    text-shadow: 0 3px 24px rgba(0, 0, 0, 0.4);
     animation: cjFadeUp 0.9s 0.15s var(--cj-ease) both;
 }
 
 .cj-hero-title em {
-    font-style: italic;
+    font-style: normal;
     color: var(--cj-gold-soft);
 }
 
@@ -367,7 +367,7 @@ body.cj-body {
 .cj-fact-value {
     display: block;
     font-size: 1.02rem;
-    font-weight: 700;
+    font-weight: 600;
     color: var(--cj-forest);
 }
 
@@ -454,8 +454,9 @@ body.cj-body {
 
 .cj-card-title {
     font-family: var(--cj-serif);
-    font-size: 1.35rem;
+    font-size: 1.3rem;
     font-weight: 600;
+    letter-spacing: -0.01em;
     color: var(--cj-forest);
     margin-bottom: 0.7rem;
 }
@@ -561,7 +562,7 @@ body.cj-body {
 .cj-tl-day {
     display: inline-block;
     font-size: 0.7rem;
-    font-weight: 700;
+    font-weight: 600;
     letter-spacing: 0.2em;
     text-transform: uppercase;
     color: #fff;
@@ -573,8 +574,9 @@ body.cj-body {
 
 .cj-tl-title {
     font-family: var(--cj-serif);
-    font-size: 1.3rem;
+    font-size: 1.25rem;
     font-weight: 600;
+    letter-spacing: -0.01em;
     color: var(--cj-forest);
     margin-bottom: 1rem;
 }
@@ -615,8 +617,40 @@ body.cj-body {
     border-radius: 0 10px 10px 0;
     font-size: 0.83rem;
     color: var(--cj-muted);
-    font-style: italic;
 }
+
+/* Day photo sitting beside the card text */
+.cj-tl-card--photo {
+    display: flex;
+    gap: 1.4rem;
+    align-items: stretch;
+}
+
+.cj-tl-card--photo .cj-tl-body {
+    flex: 1 1 auto;
+    min-width: 0;
+}
+
+.cj-tl-photo {
+    flex: 0 0 160px;
+    position: relative;
+    margin: 0;
+    border-radius: 14px;
+    overflow: hidden;
+    min-height: 200px;
+    box-shadow: 0 12px 28px -14px rgba(11, 35, 24, 0.45);
+}
+
+.cj-tl-photo img {
+    position: absolute;
+    inset: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: transform 0.6s var(--cj-ease);
+}
+
+.cj-tl-item:hover .cj-tl-photo img { transform: scale(1.07); }
 
 /* ---------- Inclusions / exclusions ---------- */
 .cj-incexc-grid {
@@ -652,7 +686,9 @@ body.cj-body {
     align-items: center;
     gap: 0.7rem;
     font-family: var(--cj-serif);
-    font-size: 1.3rem;
+    font-size: 1.25rem;
+    font-weight: 600;
+    letter-spacing: -0.01em;
     color: #fff;
     margin-bottom: 1.4rem;
 }
@@ -726,7 +762,7 @@ body.cj-body {
 
 .cj-feature h3 {
     font-size: 0.98rem;
-    font-weight: 700;
+    font-weight: 600;
     color: var(--cj-forest);
     margin-bottom: 0.4rem;
 }
@@ -796,7 +832,7 @@ body.cj-body {
     background: linear-gradient(120deg, var(--cj-gold-deep), var(--cj-gold));
     color: #fff;
     font-size: 0.68rem;
-    font-weight: 700;
+    font-weight: 600;
     letter-spacing: 0.18em;
     text-transform: uppercase;
     padding: 0.45rem 3.4rem;
@@ -815,7 +851,7 @@ body.cj-body {
 .cj-price-amount {
     font-family: var(--cj-serif);
     font-size: 4.2rem;
-    font-weight: 700;
+    font-weight: 600;
     line-height: 1;
     color: #fff;
 }
@@ -902,11 +938,12 @@ body.cj-body {
 
 .cj-band-quote {
     font-family: var(--cj-serif);
-    font-style: italic;
-    font-size: clamp(1.4rem, 3.2vw, 2.1rem);
-    line-height: 1.45;
+    font-weight: 500;
+    font-size: clamp(1.3rem, 2.8vw, 1.9rem);
+    letter-spacing: -0.01em;
+    line-height: 1.5;
     margin-bottom: 1.2rem;
-    text-shadow: 0 2px 18px rgba(0, 0, 0, 0.5);
+    text-shadow: 0 2px 16px rgba(0, 0, 0, 0.45);
 }
 
 .cj-band-source {
@@ -1061,8 +1098,7 @@ body.cj-body {
 
 .cj-testi-quote {
     font-family: var(--cj-serif);
-    font-style: italic;
-    font-size: 1.02rem;
+    font-size: 1rem;
     color: var(--cj-ink);
     line-height: 1.7;
     margin-bottom: 1.5rem;
@@ -1084,7 +1120,7 @@ body.cj-body {
     justify-content: center;
     background: linear-gradient(140deg, var(--cj-forest), var(--cj-leaf));
     color: var(--cj-gold-soft);
-    font-weight: 700;
+    font-weight: 600;
     font-size: 0.85rem;
     letter-spacing: 0.05em;
 }
@@ -1204,7 +1240,9 @@ body.cj-body {
 
 .cj-form-title {
     font-family: var(--cj-serif);
-    font-size: 1.45rem;
+    font-weight: 600;
+    letter-spacing: -0.01em;
+    font-size: 1.4rem;
     color: #fff;
     margin-bottom: 0.4rem;
 }
@@ -1329,6 +1367,8 @@ body.cj-body {
     .cj-form-card { padding: 1.8rem 1.4rem; }
     .cj-price-amount { font-size: 3.4rem; }
     .cj-tl-card { padding: 1.4rem; }
+    .cj-tl-card--photo { flex-direction: column; gap: 1.1rem; }
+    .cj-tl-photo { flex-basis: auto; order: -1; width: 100%; min-height: 0; height: 180px; }
     .cj-tl-item, .cj-tl-item:nth-child(even) { padding-left: 3.9rem; }
     .cj-tl-marker { width: 46px; height: 46px; top: 2.2rem; }
     .cj-tl-marker svg { width: 20px; height: 20px; }
@@ -1343,5 +1383,5 @@ body.cj-body {
     .cj-hero-scroll { animation: none; }
     .cj-btn--gold::after { animation: none; }
     [data-cj-reveal] { opacity: 1; transform: none; transition: none; }
-    .cj-card, .cj-feature, .cj-tl-card, .cj-g-item img, .cj-btn { transition: none; }
+    .cj-card, .cj-feature, .cj-tl-card, .cj-g-item img, .cj-tl-photo img, .cj-btn { transition: none; }
 }
