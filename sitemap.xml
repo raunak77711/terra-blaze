@@ -36,8 +36,8 @@
         <priority>0.9</priority>
     </url>
     <url>
-        <loc>https://www.terrablazeadventure.com/tour-chitwan.html</loc>
-        <lastmod>2026-07-08</lastmod>
+        <loc>https://www.terrablazeadventure.com/jungle-safari.html</loc>
+        <lastmod>2026-07-21</lastmod>
         <priority>0.9</priority>
     </url>
     <url>
@@ -48,6 +48,11 @@
     <url>
         <loc>https://www.terrablazeadventure.com/blog.html</loc>
         <lastmod>2026-07-04</lastmod>
+        <priority>0.8</priority>
+    </url>
+    <url>
+        <loc>https://www.terrablazeadventure.com/reviews.html</loc>
+        <lastmod>2026-07-21</lastmod>
         <priority>0.8</priority>
     </url>
     <url>

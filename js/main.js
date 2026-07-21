@@ -192,7 +192,8 @@ document.addEventListener('DOMContentLoaded', () => {
             '.enquiry-form-card', '.form-light-container', '.accordion-item',
             '.route-map-img', '.filter-section', '.value-card', '.guide-card',
             '.stat-item', '.quote-band-content', '.cta-simple-inner', '.blog-pill',
-            '.blog-newsletter-card', '.contact-info-card', '.contact-form-card'
+            '.blog-newsletter-card', '.contact-info-card', '.contact-form-card',
+            '.rating-summary-card', '.review-card'
         ].join(', ');
 
         const revealEls = document.querySelectorAll(revealSelectors);
@@ -246,7 +247,7 @@ document.addEventListener('DOMContentLoaded', () => {
             });
         }, { threshold: 0.5 });
 
-        document.querySelectorAll('.trust-item h3, .page-hero-stat strong')
+        document.querySelectorAll('.trust-item h3, .page-hero-stat strong, .rating-badge strong, .rating-score')
             .forEach(el => counterObserver.observe(el));
     }
 

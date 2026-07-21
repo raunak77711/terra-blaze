@@ -3926,7 +3926,15 @@ footer::before {
     html {
         font-size: 15px;
     }
-    
+
+    .nav-links {
+        gap: 1.3rem;
+    }
+
+    .nav-link {
+        font-size: 0.92rem;
+    }
+
     .cta-banner-container {
         grid-template-columns: 1fr;
         gap: 3rem;
@@ -4215,6 +4223,37 @@ footer::before {
     .contact-layout-grid {
         grid-template-columns: 1fr;
         gap: 2.5rem;
+    }
+
+    .rating-summary-section {
+        margin-top: -40px;
+    }
+
+    .rating-summary-card {
+        padding: 1.8rem 1.5rem;
+        gap: 1.8rem;
+    }
+
+    .rating-score-block {
+        width: 100%;
+    }
+
+    .rating-breakdown {
+        width: 100%;
+    }
+
+    .rating-summary-badges {
+        width: 100%;
+        border-left: none;
+        padding-left: 0;
+        justify-content: space-between;
+        border-top: 1px solid var(--border-color);
+        padding-top: 1.4rem;
+    }
+
+    .review-card-footer {
+        flex-wrap: wrap;
+        gap: 0.4rem;
     }
 }
 
@@ -4621,6 +4660,214 @@ footer::before {
 .feature-box:hover .feature-icon-wrapper {
     transform: scale(1.08) rotate(-4deg);
     background-color: rgba(184, 134, 58, 0.18);
+}
+
+/* ════════════════════════════════════════════════════════════════════
+   Reviews Page — Rating Summary & Review Cards
+   ════════════════════════════════════════════════════════════════════ */
+.rating-summary-section {
+    position: relative;
+    z-index: 5;
+    margin-top: -64px;
+    padding-bottom: 0.5rem;
+}
+
+.rating-summary-card {
+    background: var(--bg-white);
+    border-radius: var(--border-radius-lg);
+    box-shadow: var(--shadow-premium);
+    border: 1px solid var(--border-color);
+    padding: 2.4rem 2.8rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 3rem;
+    flex-wrap: wrap;
+}
+
+.rating-score-block {
+    text-align: center;
+    flex-shrink: 0;
+}
+
+.rating-score {
+    font-family: var(--font-display);
+    font-size: 3.4rem;
+    font-weight: var(--weight-heading);
+    letter-spacing: var(--track-tight);
+    color: var(--primary);
+    line-height: 1;
+    display: block;
+}
+
+.rating-score-block .testimonial-stars {
+    justify-content: center;
+    display: flex;
+    margin: 0.5rem 0 0.4rem;
+}
+
+.rating-score-count {
+    font-size: 0.85rem;
+    color: var(--text-muted);
+    font-weight: 500;
+    white-space: nowrap;
+}
+
+.rating-summary-divider {
+    width: 1px;
+    align-self: stretch;
+    background: var(--border-color);
+    flex-shrink: 0;
+}
+
+.rating-breakdown {
+    flex: 1 1 280px;
+    min-width: 240px;
+    max-width: 340px;
+    display: flex;
+    flex-direction: column;
+    gap: 0.55rem;
+}
+
+.rating-bar-row {
+    display: flex;
+    align-items: center;
+    gap: 0.7rem;
+    font-size: 0.8rem;
+    color: var(--text-muted);
+    font-weight: 500;
+}
+
+.rating-bar-row span:first-child {
+    width: 38px;
+    flex-shrink: 0;
+}
+
+.rating-bar-track {
+    flex: 1;
+    height: 7px;
+    background: var(--bg-light);
+    border-radius: 999px;
+    overflow: hidden;
+}
+
+.rating-bar-fill {
+    display: block;
+    height: 100%;
+    border-radius: 999px;
+    background: linear-gradient(90deg, var(--accent), #f5a623);
+}
+
+.rating-bar-pct {
+    width: 36px;
+    text-align: right;
+    flex-shrink: 0;
+}
+
+.rating-summary-badges {
+    display: flex;
+    gap: 2.2rem;
+    flex-shrink: 0;
+    border-left: 1px solid var(--border-color);
+    padding-left: 2.6rem;
+}
+
+.rating-badge {
+    text-align: center;
+}
+
+.rating-badge strong {
+    display: block;
+    font-family: var(--font-numbers);
+    font-size: 1.55rem;
+    font-weight: 600;
+    color: var(--accent-hover);
+    line-height: 1.15;
+}
+
+.rating-badge span {
+    font-size: 0.7rem;
+    color: var(--text-muted);
+    text-transform: uppercase;
+    letter-spacing: 0.05em;
+    font-weight: 600;
+}
+
+/* Review cards extend .testimonial-card with a photo avatar + trek context */
+.review-card-top {
+    display: flex;
+    align-items: flex-start;
+    gap: 0.9rem;
+    margin-bottom: 1rem;
+}
+
+.review-identity h4 {
+    font-size: 1rem;
+    color: var(--primary);
+    font-weight: 600;
+    line-height: 1.35;
+    display: flex;
+    align-items: center;
+    gap: 0.4rem;
+    flex-wrap: wrap;
+}
+
+.review-location {
+    font-size: 0.8rem;
+    color: var(--text-muted);
+}
+
+.review-verified {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.2rem;
+    font-size: 0.68rem;
+    font-weight: 600;
+    color: #189a6c;
+    background: rgba(24, 154, 108, 0.1);
+    padding: 0.12rem 0.45rem;
+    border-radius: 999px;
+    text-transform: uppercase;
+    letter-spacing: 0.02em;
+}
+
+.review-verified svg {
+    width: 11px;
+    height: 11px;
+    fill: currentColor;
+}
+
+.review-trek-tag {
+    display: inline-flex;
+    align-self: flex-start;
+    background: rgba(184, 134, 58, 0.1);
+    color: var(--accent-hover);
+    font-size: 0.72rem;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 0.04em;
+    padding: 0.32rem 0.75rem;
+    border-radius: var(--border-radius-sm);
+    margin-bottom: 0.9rem;
+}
+
+.review-card-footer {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-top: 1.2rem;
+    padding-top: 1rem;
+    border-top: 1px solid var(--border-color);
+    font-size: 0.78rem;
+    color: var(--text-muted);
+}
+
+.review-card-footer .trek-card-meta-icon {
+    width: 14px;
+    height: 14px;
+    fill: var(--accent);
+    vertical-align: -2px;
+    margin-right: 0.3rem;
 }
 
 /* Respect users who prefer reduced motion */
