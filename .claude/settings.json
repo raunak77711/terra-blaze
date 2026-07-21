@@ -127,7 +127,12 @@
       "Read(//c/Users/Acer/AppData/Local/Temp/claude/c--Users-Acer-OneDrive-Desktop-syncshi/8de479b8-1009-44df-9972-9fd5e952780c/scratchpad/pw-check/**)",
       "Bash(echo \"EXIT:$?\")",
       "Bash(mkdir -p shots)",
-      "Bash(node shot2.js)"
+      "Bash(node shot2.js)",
+      "Bash(find \"C:\\\\Users\\\\Acer\\\\.claude\\\\projects\\\\c--Users-Acer-OneDrive-Desktop-syncshi\\\\memory\" -iname \"jungle-safari*\")",
+      "Read(//c/Users/Acer/.claude/projects/c--Users-Acer-OneDrive-Desktop-syncshi/memory/**)",
+      "Bash(npx --version)",
+      "Bash(node -e \"console.log\\(require.resolve\\('playwright'\\)\\)\")",
+      "Bash(node verify.mjs)"
     ],
     "additionalDirectories": [
       "c:\\Users\\Acer\\OneDrive\\Desktop\\syncshi",
