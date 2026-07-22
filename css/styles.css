@@ -518,6 +518,10 @@ header.scrolled .hamburger-line {
     border-color: rgba(184, 134, 58, 0.35);
 }
 
+.trek-card-clickable {
+    cursor: pointer;
+}
+
 .trek-card-title {
     font-family: var(--font-display);
     font-weight: var(--weight-heading);

@@ -321,4 +321,16 @@ document.addEventListener('DOMContentLoaded', () => {
             if (e.key === 'Escape') closeLightbox();
         });
     }
+
+    // 5g. Make whole trek/safari cards clickable, not just "View Details"
+    document.querySelectorAll('.trek-card').forEach(card => {
+        const detailsLink = card.querySelector('.trek-card-btn-link');
+        if (!detailsLink) return;
+
+        card.classList.add('trek-card-clickable');
+        card.addEventListener('click', (e) => {
+            if (e.target.closest('a')) return;
+            window.location.href = detailsLink.href;
+        });
+    });
 });
