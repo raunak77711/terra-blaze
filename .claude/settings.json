@@ -168,7 +168,8 @@
       "Bash(echo \"exit:$?\")",
       "Bash(grep -n -i \"USD\\\\|\\\\$[0-9]\\\\|/person\\\\|price\" blog-manaslu-circuit-guide.html blog-prevent-altitude-sickness.html blog-porter-story-annapurna.html blog-budget-trekking-nepal.html)",
       "Bash(python \"C:\\\\Users\\\\Acer\\\\AppData\\\\Local\\\\Temp\\\\claude\\\\c--Users-Acer-OneDrive-Desktop-syncshi\\\\e2263756-2ae0-46b4-a865-49447e3fea65\\\\scratchpad\\\\swap_whatsapp.py\")",
-      "PowerShell(Stop-Process -Id 1564 -Force -ErrorAction SilentlyContinue)"
+      "PowerShell(Stop-Process -Id 1564 -Force -ErrorAction SilentlyContinue)",
+      "Bash(start \"\" \"c:\\\\Users\\\\Acer\\\\OneDrive\\\\Desktop\\\\syncshi\\\\index.html\")"
     ],
     "additionalDirectories": [
       "c:\\Users\\Acer\\OneDrive\\Desktop\\syncshi",

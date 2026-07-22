@@ -118,7 +118,7 @@ document.addEventListener('DOMContentLoaded', () => {
 
                 const subject = encodeURIComponent(`New Trek Enquiry - ${trekLabel}`);
                 const body = encodeURIComponent(bodyLines.join('\n'));
-                const gmailUrl = `https://mail.google.com/mail/?view=cm&fs=1&to=info@terrablazeadventure.com&su=${subject}&body=${body}`;
+                const gmailUrl = `https://mail.google.com/mail/?view=cm&fs=1&to=booking@terrablazeadventure.com&su=${subject}&body=${body}`;
 
                 window.open(gmailUrl, '_blank');
                 form.reset();

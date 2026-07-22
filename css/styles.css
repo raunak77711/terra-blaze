@@ -1833,8 +1833,8 @@ footer::before {
     gap: 1rem;
 }
 
-.whatsapp-float {
-    background-color: #25d366;
+.email-float {
+    background-color: var(--accent);
     color: #fff;
     width: 60px;
     height: 60px;
@@ -1842,21 +1842,25 @@ footer::before {
     display: flex;
     align-items: center;
     justify-content: center;
-    box-shadow: 0 4px 15px rgba(37, 211, 102, 0.45);
+    box-shadow: 0 4px 15px rgba(184, 134, 58, 0.45);
     transition: all var(--transition-fast);
     animation: floatBounce 3s infinite ease-in-out;
 }
 
-.whatsapp-float:hover {
-    background-color: #1ebe5b;
+.email-float:hover {
+    background-color: var(--accent-hover);
     transform: scale(1.1);
-    box-shadow: 0 6px 20px rgba(37, 211, 102, 0.55);
+    box-shadow: 0 6px 20px rgba(184, 134, 58, 0.55);
 }
 
-.whatsapp-float svg {
-    width: 32px;
-    height: 32px;
-    fill: currentColor;
+.email-float svg {
+    width: 30px;
+    height: 30px;
+    fill: none;
+    stroke: currentColor;
+    stroke-width: 1.8;
+    stroke-linecap: round;
+    stroke-linejoin: round;
 }
 
 .sticky-quote-btn {
