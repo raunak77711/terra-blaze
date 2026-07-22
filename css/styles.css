@@ -7,12 +7,12 @@
     --accent: #b8863a;
     --accent-hover: #9c7130;
     --accent-soft: #e8d9b8;
-    --bg-light: #f8fafc;
+    --bg-light: #f7f5f0;
     --bg-white: #ffffff;
-    --text-dark: #1e293b;
-    --text-muted: #64748b;
+    --text-dark: #242220;
+    --text-muted: #6f6a62;
     --text-light: #ffffff;
-    --border-color: #e2e8f0;
+    --border-color: #e7e2d8;
 
     --font-primary: 'Poppins', 'Noto Sans Devanagari', sans-serif;
     --font-numbers: 'Poppins', sans-serif;
@@ -23,9 +23,9 @@
     --track-tight: -0.02em;
     --track-snug: -0.01em;
 
-    --shadow-sm: 0 1px 2px rgba(15, 23, 42, 0.06);
-    --shadow-md: 0 3px 8px -2px rgba(15, 23, 42, 0.08), 0 1px 3px rgba(15, 23, 42, 0.04);
-    --shadow-lg: 0 12px 24px -8px rgba(15, 23, 42, 0.1), 0 3px 8px -3px rgba(15, 23, 42, 0.05);
+    --shadow-sm: 0 1px 2px rgba(14, 46, 74, 0.07);
+    --shadow-md: 0 3px 8px -2px rgba(14, 46, 74, 0.09), 0 1px 3px rgba(14, 46, 74, 0.05);
+    --shadow-lg: 0 12px 24px -8px rgba(14, 46, 74, 0.12), 0 3px 8px -3px rgba(14, 46, 74, 0.06);
     --shadow-premium: 0 18px 36px -14px rgba(14, 46, 74, 0.14), 0 6px 12px -6px rgba(14, 46, 74, 0.07);
     --shadow-glass: 0 8px 28px -6px rgba(14, 46, 74, 0.08);
     --shadow-gold: 0 12px 28px -12px rgba(184, 134, 58, 0.38);
@@ -437,7 +437,10 @@ header.scrolled .hamburger-line {
 }
 
 .section-bg-alt {
-    background-color: var(--bg-white);
+    background:
+        radial-gradient(ellipse 55% 60% at 6% -4%, rgba(184, 134, 58, 0.05), transparent 50%),
+        radial-gradient(ellipse 50% 55% at 100% 104%, rgba(14, 46, 74, 0.045), transparent 55%),
+        var(--bg-white);
 }
 
 .section-header {
@@ -1830,27 +1833,27 @@ footer::before {
     gap: 1rem;
 }
 
-.email-float {
-    background-color: var(--accent);
-    color: var(--text-light);
+.whatsapp-float {
+    background-color: #25d366;
+    color: #fff;
     width: 60px;
     height: 60px;
     border-radius: 50%;
     display: flex;
     align-items: center;
     justify-content: center;
-    box-shadow: 0 4px 15px rgba(184, 134, 58, 0.4);
+    box-shadow: 0 4px 15px rgba(37, 211, 102, 0.45);
     transition: all var(--transition-fast);
     animation: floatBounce 3s infinite ease-in-out;
 }
 
-.email-float:hover {
-    background-color: #c96e15;
+.whatsapp-float:hover {
+    background-color: #1ebe5b;
     transform: scale(1.1);
-    box-shadow: 0 6px 20px rgba(184, 134, 58, 0.5);
+    box-shadow: 0 6px 20px rgba(37, 211, 102, 0.55);
 }
 
-.email-float svg {
+.whatsapp-float svg {
     width: 32px;
     height: 32px;
     fill: currentColor;
@@ -4204,7 +4207,8 @@ footer::before {
        (clipped, since body uses overflow-x: hidden) */
     .treks-grid,
     .features-container,
-    .testimonials-grid {
+    .testimonials-grid,
+    .filter-grid {
         grid-template-columns: 1fr;
     }
 

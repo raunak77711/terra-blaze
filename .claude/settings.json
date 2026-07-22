@@ -159,7 +159,16 @@
       "Bash(node C:/Users/Acer/AppData/Local/Temp/claude/c--Users-Acer-OneDrive-Desktop-syncshi/da62689a-642b-4ae0-9d15-5d8567d9273e/scratchpad/cdp-shot.js http://localhost:8123/jungle-safari.html '' C:/Users/Acer/AppData/Local/Temp/claude/c--Users-Acer-OneDrive-Desktop-syncshi/da62689a-642b-4ae0-9d15-5d8567d9273e/scratchpad/jungle-listing.png)",
       "Bash(node C:/Users/Acer/AppData/Local/Temp/claude/c--Users-Acer-OneDrive-Desktop-syncshi/da62689a-642b-4ae0-9d15-5d8567d9273e/scratchpad/cdp-shot.js http://localhost:8123/safari-chitwan.html 'a[href='\\\\''#booking'\\\\''].jng-btn--gold' C:/Users/Acer/AppData/Local/Temp/claude/c--Users-Acer-OneDrive-Desktop-syncshi/da62689a-642b-4ae0-9d15-5d8567d9273e/scratchpad/cta-band.png)",
       "Bash(node C:/Users/Acer/AppData/Local/Temp/claude/c--Users-Acer-OneDrive-Desktop-syncshi/da62689a-642b-4ae0-9d15-5d8567d9273e/scratchpad/cdp-shot.js http://localhost:8123/jungle-safari.html .trek-card-img C:/Users/Acer/AppData/Local/Temp/claude/c--Users-Acer-OneDrive-Desktop-syncshi/da62689a-642b-4ae0-9d15-5d8567d9273e/scratchpad/thumb-card.png)",
-      "Bash(powershell -Command \"Stop-Process -Id 14036 -Force\")"
+      "Bash(powershell -Command \"Stop-Process -Id 14036 -Force\")",
+      "Bash(where chromium-cli *)",
+      "Bash(where msedge *)",
+      "Bash(python -m http.server 8090)",
+      "Bash(curl -s -o /dev/null -w \"%{http_code}\\\\n\" http://localhost:8090/index.html)",
+      "Bash(\"/c/Program Files \\(x86\\)/Microsoft/Edge/Application/msedge.exe\" --headless=new --disable-gpu --hide-scrollbars --window-size=1600,1200 --screenshot=home.png http://localhost:8090/index.html)",
+      "Bash(echo \"exit:$?\")",
+      "Bash(grep -n -i \"USD\\\\|\\\\$[0-9]\\\\|/person\\\\|price\" blog-manaslu-circuit-guide.html blog-prevent-altitude-sickness.html blog-porter-story-annapurna.html blog-budget-trekking-nepal.html)",
+      "Bash(python \"C:\\\\Users\\\\Acer\\\\AppData\\\\Local\\\\Temp\\\\claude\\\\c--Users-Acer-OneDrive-Desktop-syncshi\\\\e2263756-2ae0-46b4-a865-49447e3fea65\\\\scratchpad\\\\swap_whatsapp.py\")",
+      "PowerShell(Stop-Process -Id 1564 -Force -ErrorAction SilentlyContinue)"
     ],
     "additionalDirectories": [
       "c:\\Users\\Acer\\OneDrive\\Desktop\\syncshi",

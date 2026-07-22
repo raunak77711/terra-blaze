@@ -848,6 +848,8 @@ body.jng-body {
 
 .jng-ticket-amount { font-family: var(--font-display); font-size: 3.6rem; font-weight: 700; line-height: 1; color: #fff; }
 .jng-ticket-amount sup { font-size: 1.3rem; color: var(--jng-gold); margin-right: 0.25rem; }
+.jng-ticket-amount--quote { font-size: 2rem; font-weight: 600; }
+.jng-ticket-amount--quote span { color: var(--jng-gold); }
 .jng-ticket-per { font-size: 0.82rem; color: rgba(238, 244, 238, 0.65); margin: 0.5rem 0 1.5rem; }
 
 .jng-ticket-includes { display: flex; flex-direction: column; gap: 0.6rem; margin-bottom: 1.6rem; }
